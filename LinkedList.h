@@ -6,5 +6,8 @@
 template<class T>
 class LinkedList : public List<T>
 {
+	Node<T>* _first;
+	int _counter = 0;
+public:
 
 };
