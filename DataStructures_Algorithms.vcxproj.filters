@@ -16,6 +16,9 @@
     <Filter Include="Header Files\ListHeaders">
       <UniqueIdentifier>{c92a5044-2686-42b4-a5b1-d1cc04068e5e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\NodeHeaders">
+      <UniqueIdentifier>{1bddd37e-ef9c-4b1d-9c47-79e038ee4324}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -28,6 +31,12 @@
     </ClInclude>
     <ClInclude Include="ListArray.h">
       <Filter>Header Files\ListHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>Header Files\ListHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeBase.h">
+      <Filter>Header Files\NodeHeaders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
