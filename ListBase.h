@@ -1,6 +1,7 @@
 #pragma once
+#include<iostream>
 #include<exception>
-
+using namespace std;
 
 
 /// <summary>
@@ -18,5 +19,7 @@ public:
 	virtual T Remove_From_End() = 0;
 	virtual void Print() = 0;
 	virtual int GetCounter() = 0;
+	virtual bool IsEmpty() = 0;
+	virtual bool IsFull() = 0;
 	virtual T operator[](int index) = 0;
 };

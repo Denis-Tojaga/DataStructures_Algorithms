@@ -20,11 +20,13 @@ class ListArray : public List<T>
 		cout << "The array is expanded, its size is ->  " << max_size << " now.\n";
 	}
 	void ShowException() { throw std::exception("The list is empty!\n"); }
+public:
 	bool IsFull() { return _counter == max_size; }
 	bool IsEmpty() { return _counter == 0; }
-public:
+
 	//returns the number of elements 
 	int GetCounter() { return _counter; }
+
 	//adds a new element at the beginning of a list
 	void Add_On_End(T value)
 	{
@@ -32,18 +34,22 @@ public:
 			ExpandArray();
 		_arr[_counter] = value;
 		_counter++;
+		cout << "Element -> | " << _arr[_counter-1] << " | is added to list.\n";
 	}
+
 	//add a new element at the end of a list
 	void Add_On_Start(T value)
 	{
 		if (IsFull())
 			ExpandArray();
-		for (int i = _counter - 1; i >= 1; i--)
+		for (int i = _counter; i >= 1; i--)
 			_arr[i] = _arr[i - 1];
 
 		_arr[0] = value;
 		_counter++;
+		cout << "Element -> | " << _arr[0] << " | is added to list.\n";
 	}
+
 	//removes first element from the beginning of a list
 	T Remove_From_Start()
 	{
@@ -53,8 +59,10 @@ public:
 		for (int i = 0; i < _counter - 1; i++)
 			_arr[i] = _arr[i + 1];
 		_counter--;
+		cout << "Element -> | " << deletedValue << " | is deleted from list.\n";
 		return deletedValue;
 	}
+
 	//removes last element from the beginning of a list
 	T Remove_From_End()
 	{
@@ -62,8 +70,10 @@ public:
 			ShowException();
 		T deletedValue = _arr[_counter - 1];
 		_counter--;
+		cout << "Element -> | " << deletedValue << " | is deleted from list.\n";
 		return deletedValue;
 	}
+
 	//returns an element at the specific index
 	T operator[] (int index)
 	{
@@ -71,6 +81,7 @@ public:
 			ShowException();
 		return _arr[index];
 	}
+
 	//prints out all elements currently in the list
 	void Print()
 	{
@@ -80,9 +91,10 @@ public:
 			return;
 		}
 
-		cout << "*** Element of a LIST ARRAY *** \n";
+		cout << "\n\n*** Element of a LIST ARRAY *** \n";
 
 		for (int i = 0; i < _counter; i++)
 			cout << _arr[i] << " | ";
+		cout << "\n\n\n";
 	}
 };
