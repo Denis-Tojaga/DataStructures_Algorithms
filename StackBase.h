@@ -10,4 +10,5 @@ class Stack
 	virtual T RemoveFromStack() = 0;
 	virtual void IsEmpty() = 0;
 	virtual void IsFull() = 0;
+	virtual void Print() = 0;
 };

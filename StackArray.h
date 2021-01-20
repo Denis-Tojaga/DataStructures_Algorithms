@@ -33,15 +33,21 @@ public:
 			ExpandStack();
 		_stack[_counter] = value;
 		_counter++;
-		cout << "Element -> | " << _stack[_counter - 1] << " | added on stack\n";
+		cout << "Element -> | " << _stack[_counter - 1] << " | is added to stack\n";
 	}
-
-
-
-
-
-
-
-
-
+	T Remove_From_Stack()
+	{
+		if (IsEmpty())
+			ShowException();
+		T deletedValue = _stack[_counter - 1];
+		_counter--;
+		cout << "Element -> | " << _stack[_counter - 1] << " | is removed from stack\n";
+	}
+	void Print()
+	{
+		cout << "\n\n\n";
+		for (int i = _counter; i > -1; i--)
+			cout << _stack[i] << " | ";
+		cout << "\n\n\n";
+	}
 };
