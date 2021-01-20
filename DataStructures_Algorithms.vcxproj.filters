@@ -47,5 +47,8 @@
     <ClInclude Include="StackArray.h">
       <Filter>Header Files\StackHeaders</Filter>
     </ClInclude>
+    <ClInclude Include="StackLinked.h">
+      <Filter>Header Files\StackHeaders</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -148,6 +148,7 @@
     <ClInclude Include="NodeBase.h" />
     <ClInclude Include="StackArray.h" />
     <ClInclude Include="StackBase.h" />
+    <ClInclude Include="StackLinked.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
