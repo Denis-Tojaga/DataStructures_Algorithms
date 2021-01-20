@@ -146,6 +146,8 @@
     <ClInclude Include="ListArray.h" />
     <ClInclude Include="ListBase.h" />
     <ClInclude Include="NodeBase.h" />
+    <ClInclude Include="QueueArray.h" />
+    <ClInclude Include="QueueBase.h" />
     <ClInclude Include="StackArray.h" />
     <ClInclude Include="StackBase.h" />
     <ClInclude Include="StackLinked.h" />

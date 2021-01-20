@@ -22,6 +22,9 @@
     <Filter Include="Header Files\StackHeaders">
       <UniqueIdentifier>{2c9e3896-0307-4f7d-b8b1-3a665a29fd56}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\QueueHeaders">
+      <UniqueIdentifier>{ee29c124-ddb6-4fff-89e8-93b07c974d84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -49,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="StackLinked.h">
       <Filter>Header Files\StackHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueBase.h">
+      <Filter>Header Files\QueueHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueArray.h">
+      <Filter>Header Files\QueueHeaders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

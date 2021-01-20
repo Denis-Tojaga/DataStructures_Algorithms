@@ -68,6 +68,8 @@ void Test_LinkedList()
 	}
 }
 
+
+
 /// <summary>
 /// Test Methods for Stack data struture
 /// </summary>
@@ -121,9 +123,13 @@ void Test_StackLinked()
 }
 
 
+
+
+
+
+
 void main()
 {
-	//Test_StackArray();
-	Test_StackLinked();
+	
 	system("pause>0");
 }
