@@ -1,6 +1,7 @@
 #include<iostream>
 #include "LinkedList.h";
 #include "ListArray.h";
+#include "StackArray.h";
 using namespace std;
 
 
@@ -67,11 +68,37 @@ void Test_LinkedList()
 }
 
 
+void Test_StackArray()
+{
+	StackArray<int> stack;
+	for (int i = 0; i < 10; i++)
+		stack.Add_To_Stack(i);
+
+	for (int i = 0; i < 10; i++)
+		stack.Add_To_Stack(i);
+
+
+	stack.Print();
+
+
+	for (int i = 0; i < 3; i++)
+		stack.Remove_From_Stack();
+
+	for (int i = 0; i < 12; i++)
+		stack.Remove_From_Stack();
+
+	while (!stack.IsEmpty())
+	{
+		stack.Remove_From_Stack();
+	}
+	cout << "\nStack is now empty!\n";
+}
+
 
 
 void main()
 {
-	
+	Test_StackArray();
 
 	system("pause>0");
 }

@@ -2,14 +2,12 @@
 #include "StackBase.h";
 
 
-
 template<class T>
 class StackArray : public Stack<T>
 {
 	int max_size = 10;
 	T* _stack = new T[max_size];
 	int _counter = 0;
-
 	void ExpandStack()
 	{
 		T* tempStack = new T[max_size * 2];
@@ -25,9 +23,10 @@ class StackArray : public Stack<T>
 		throw exception("The stack is empty, you cannot remove elements!\n");
 	}
 public:
+
 	bool IsFull() { return _counter == max_size; }
 	bool IsEmpty() { return _counter == 0; }
-	void Add_On_Stack(T value)
+	void Add_To_Stack(T value)
 	{
 		if (IsFull())
 			ExpandStack();
@@ -41,12 +40,13 @@ public:
 			ShowException();
 		T deletedValue = _stack[_counter - 1];
 		_counter--;
-		cout << "Element -> | " << _stack[_counter - 1] << " | is removed from stack\n";
+		cout << "Element -> | " << _stack[_counter] << " | is removed from stack\n";
+		return deletedValue;
 	}
 	void Print()
 	{
 		cout << "\n\n\n";
-		for (int i = _counter; i > -1; i--)
+		for (int i = _counter-1; i > -1; i--)
 			cout << _stack[i] << " | ";
 		cout << "\n\n\n";
 	}
