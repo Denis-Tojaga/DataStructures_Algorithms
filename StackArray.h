@@ -45,7 +45,7 @@ public:
 	}
 	void Print()
 	{
-		cout << "\n\n\n";
+		cout << "\n\n\n ***Array STACK elements*** \n";
 		for (int i = _counter-1; i > -1; i--)
 			cout << _stack[i] << " | ";
 		cout << "\n\n\n";

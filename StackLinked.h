@@ -24,8 +24,6 @@ public:
 		_counter++;
 		cout << "Node added with value -> | " << _head->value << " | \n";
 	}
-
-
 	T Remove_From_Stack()
 	{
 		if (IsEmpty())
@@ -35,22 +33,26 @@ public:
 		Node<T>* tempNode = _head;
 
 		T deletedValue = tempNode->value;
+		//_head's nextNode is node bellow him
+		_head = _head->_nextNode;
 		//Dealocation of that element
 		delete tempNode;
 
-		//_head's nextNode is node bellow him
-		_head = _head->_nextNode;
-		_counter--;
-	}
+		cout << "Node removed with value -> | " << deletedValue << " | \n";
 
+		_counter--;
+		return deletedValue;
+	}
 	void Print()
 	{
-
+		cout << "\n\n\n ***Linked STACK elements*** \n";
+		Node<T>* tempNode = _head;
+		//searching while tempNode actually exists
+		while (tempNode != nullptr)
+		{
+			cout << tempNode->value << " | ";
+			tempNode = tempNode->_nextNode;
+		}
+		cout << "\n\n\n";
 	}
-
-
-
-
-
-
 };

@@ -2,11 +2,12 @@
 #include "LinkedList.h";
 #include "ListArray.h";
 #include "StackArray.h";
+#include "StackLinked.h";
 using namespace std;
 
 
 /// <summary>
-/// Test Methods for list data structure
+/// Test Methods for List data structure
 /// </summary>
 void Test_ListArray()
 {
@@ -18,7 +19,7 @@ void Test_ListArray()
 
 		for (int i = 0; i < 15; ++i)
 			_listArr.Add_On_End(i);
-		
+
 		cout << endl;
 		_listArr.Print();
 		cout << endl;
@@ -67,7 +68,9 @@ void Test_LinkedList()
 	}
 }
 
-
+/// <summary>
+/// Test Methods for Stack data struture
+/// </summary>
 void Test_StackArray()
 {
 	StackArray<int> stack;
@@ -93,12 +96,34 @@ void Test_StackArray()
 	}
 	cout << "\nStack is now empty!\n";
 }
+void Test_StackLinked()
+{
+	StackLinked<int> stack;
+	for (int i = 0; i < 10; i++)
+		stack.Add_To_Stack(i);
 
+	for (int i = 0; i < 10; i++)
+		stack.Add_To_Stack(i);
+
+
+	stack.Print();
+
+	for (int i = 0; i < 3; i++)
+		stack.Remove_From_Stack();
+
+	for (int i = 0; i < 12; i++)
+		stack.Remove_From_Stack();
+
+
+	while (!stack.IsEmpty())
+		stack.Remove_From_Stack();
+
+}
 
 
 void main()
 {
-	Test_StackArray();
-
+	//Test_StackArray();
+	Test_StackLinked();
 	system("pause>0");
 }
