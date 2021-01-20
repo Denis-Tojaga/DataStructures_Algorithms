@@ -4,7 +4,9 @@
 using namespace std;
 
 
-
+/// <summary>
+/// Test Methods for list data structure
+/// </summary>
 void Test_ListArray()
 {
 	ListArray<int> _listArr;
@@ -34,9 +36,6 @@ void Test_ListArray()
 		cout << "Exception -> " << ex.what() << endl;
 	}
 }
-
-
-
 void Test_LinkedList()
 {
 	LinkedList<int> _linkedList;
@@ -67,10 +66,12 @@ void Test_LinkedList()
 	}
 }
 
+
+
+
 void main()
 {
-	//Test_ListArray();
-	Test_LinkedList();
+	
 
 	system("pause>0");
 }

@@ -19,6 +19,9 @@
     <Filter Include="Header Files\NodeHeaders">
       <UniqueIdentifier>{1bddd37e-ef9c-4b1d-9c47-79e038ee4324}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\StackHeaders">
+      <UniqueIdentifier>{2c9e3896-0307-4f7d-b8b1-3a665a29fd56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -37,6 +40,12 @@
     </ClInclude>
     <ClInclude Include="NodeBase.h">
       <Filter>Header Files\NodeHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="StackBase.h">
+      <Filter>Header Files\StackHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="StackArray.h">
+      <Filter>Header Files\StackHeaders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
