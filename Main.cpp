@@ -5,6 +5,7 @@
 #include "StackLinked.h";
 #include "QueueArray.h";
 #include "QueueLinked.h";
+#include "Heap.h";
 using namespace std;
 
 
@@ -177,8 +178,30 @@ void Test_QueueLinked()
 
 
 
+void Test_Heap()
+{
+	Heap<int> heap;
+	for (int i = 0; i < 10; ++i)
+		heap.Add_On_Heap(i);
+
+	for (int i = 0; i < 10; ++i)
+		heap.Add_On_Heap(i);
+
+	heap.Print();
+
+	for (int i = 0; i < 3; ++i)
+		heap.Remove_From_Heap();
+
+	for (int i = 0; i < 12; ++i)
+		heap.Remove_From_Heap();
+
+	while (!heap.IsEmpty())
+		heap.Remove_From_Heap();
+}
+
+
 void main()
 {
-	Test_QueueLinked();
+	Test_Heap();
 	system("pause>0");
 }
