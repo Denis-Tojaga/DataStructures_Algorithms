@@ -1,1 +1,1 @@
-# Implementation of all DataStructures and Algorithms
+# Implementation of all Data Structures and Algorithms
