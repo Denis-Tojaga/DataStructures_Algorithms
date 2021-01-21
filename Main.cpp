@@ -4,6 +4,7 @@
 #include "StackArray.h";
 #include "StackLinked.h";
 #include "QueueArray.h";
+#include "QueueLinked.h";
 using namespace std;
 
 
@@ -140,9 +141,7 @@ void Test_QueueArray()
 	for (int i = 0; i < 10; ++i)
 		_queueArr.Add_To_Queue(i);
 
-
 	_queueArr.Print();
-
 
 	for (int i = 0; i < 3; ++i)
 		_queueArr.Remove_From_Queue();
@@ -154,11 +153,32 @@ void Test_QueueArray()
 	while (!_queueArr.IsEmpty())
 		_queueArr.Remove_From_Queue();
 }
+void Test_QueueLinked()
+{
+	LinkedQueue<int> _linkedQueue;
+	for (int i = 0; i < 10; ++i)
+		_linkedQueue.Add_To_Queue(i);
+	for (int i = 0; i < 10; ++i)
+		_linkedQueue.Add_To_Queue(i);
 
+
+	_linkedQueue.Print();
+
+	for (int i = 0; i < 3; ++i)
+		_linkedQueue.Remove_From_Queue();
+
+	for (int i = 0; i < 12; ++i)
+		_linkedQueue.Remove_From_Queue();
+
+
+	while (!_linkedQueue.IsEmpty())
+		_linkedQueue.Remove_From_Queue();
+}
 
 
 
 void main()
 {
+	Test_QueueLinked();
 	system("pause>0");
 }

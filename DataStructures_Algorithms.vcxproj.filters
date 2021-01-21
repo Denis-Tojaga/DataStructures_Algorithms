@@ -59,7 +59,7 @@
     <ClInclude Include="QueueArray.h">
       <Filter>Header Files\QueueHeaders</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedQueue.h">
+    <ClInclude Include="QueueLinked.h">
       <Filter>Header Files\QueueHeaders</Filter>
     </ClInclude>
   </ItemGroup>
