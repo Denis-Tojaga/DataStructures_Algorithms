@@ -3,6 +3,7 @@
 #include "ListArray.h";
 #include "StackArray.h";
 #include "StackLinked.h";
+#include "QueueArray.h";
 using namespace std;
 
 
@@ -125,10 +126,33 @@ void Test_StackLinked()
 
 
 
-
+/// <summary>
+/// Test Methods for Queue data structure
+/// </summary>
 void Test_QueueArray()
 {
+	QueueArray<int> _queueArr;
 
+	for (int i = 0; i < 10; ++i)
+		_queueArr.Add_To_Queue(i);
+
+
+	for (int i = 0; i < 10; ++i)
+		_queueArr.Add_To_Queue(i);
+
+
+	_queueArr.Print();
+
+
+	for (int i = 0; i < 3; ++i)
+		_queueArr.Remove_From_Queue();
+
+	for (int i = 0; i < 12; ++i)
+		_queueArr.Remove_From_Queue();
+
+
+	while (!_queueArr.IsEmpty())
+		_queueArr.Remove_From_Queue();
 }
 
 
@@ -136,6 +160,5 @@ void Test_QueueArray()
 
 void main()
 {
-	
 	system("pause>0");
 }

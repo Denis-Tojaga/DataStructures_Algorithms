@@ -11,6 +11,7 @@ class QueueArray : public Queue<T>
 	T* _queue = new T[max_size];
 	void ShowException() { throw exception("Not able to remove elements from the queue, it's empty!\n"); }
 public:
+	int GetCounter() { return _counter; }
 	bool IsEmpty() { return _counter == 0; }
 	bool IsFull() { return false; }
 	void Add_To_Queue(T value)
@@ -34,14 +35,21 @@ public:
 		_counter--;
 		if (_start == max_size)
 			_start = 0;
+		return deletedValue;
+	}
+	T operator[] (int index)
+	{
+		if (index > _counter || index < 0)
+			throw exception("Not able to find element on that location, please enter valid index!\n");
+		return _queue[index];
 	}
 	void Print()
 	{
-		if(IsEmpty())
-			cout<<"\n\n***The queue is empty!***\n\n"
+		if (IsEmpty())
+			cout << "\n\n***The queue is empty!***\n\n";
 		else
 		{
-			cout << "\n\n\n*** Elements of QueueArray ***\n\n"
+			cout << "\n\n\n*** Elements of QueueArray ***\n\n";
 			int helpCounter = 0;
 			int helpStart = _start;
 			while (helpCounter < _counter)
@@ -52,6 +60,8 @@ public:
 				if (helpStart == max_size)
 					helpStart = 0;
 			}
+
+			cout << "\n\n";
 		}
 	}
 };
