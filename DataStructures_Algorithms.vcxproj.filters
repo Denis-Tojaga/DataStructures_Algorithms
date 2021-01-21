@@ -59,5 +59,8 @@
     <ClInclude Include="QueueArray.h">
       <Filter>Header Files\QueueHeaders</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedQueue.h">
+      <Filter>Header Files\QueueHeaders</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

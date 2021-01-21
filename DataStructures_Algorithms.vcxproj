@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="ListArray.h" />
     <ClInclude Include="ListBase.h" />
     <ClInclude Include="NodeBase.h" />
