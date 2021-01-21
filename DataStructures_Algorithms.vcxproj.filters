@@ -25,6 +25,9 @@
     <Filter Include="Header Files\QueueHeaders">
       <UniqueIdentifier>{ee29c124-ddb6-4fff-89e8-93b07c974d84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\HeapHeaders">
+      <UniqueIdentifier>{f00d78d0-8b00-41c4-a462-a821263a9a6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -61,6 +64,12 @@
     </ClInclude>
     <ClInclude Include="QueueLinked.h">
       <Filter>Header Files\QueueHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapBase.h">
+      <Filter>Header Files\HeapHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>Header Files\HeapHeaders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -14,6 +14,8 @@ public:
 	int GetCounter() { return _counter; }
 	bool IsEmpty() { return _counter == 0; }
 	bool IsFull() { return false; }
+
+
 	void Add_To_Queue(T value)
 	{
 		_queue[_end] = value;
@@ -37,6 +39,9 @@ public:
 			_start = 0;
 		return deletedValue;
 	}
+
+
+
 	T operator[] (int index)
 	{
 		if (index > _counter || index < 0)

@@ -15,6 +15,8 @@ public:
 	LinkedQueue() :_start(nullptr), _end(nullptr), _counter(0) {}
 	bool IsFull() { return false; }
 	bool IsEmpty() { return _start == nullptr; }
+
+
 	void Add_To_Queue(T value)
 	{
 		//newNode will now point to the adress of a last element (because _end is already pointing to a last element)
@@ -44,6 +46,9 @@ public:
 		_counter--;
 		return deletedNode;
 	}
+
+
+
 	void Print()
 	{
 		if (IsEmpty())
