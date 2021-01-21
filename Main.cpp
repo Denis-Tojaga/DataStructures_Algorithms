@@ -177,7 +177,9 @@ void Test_QueueLinked()
 }
 
 
-
+/// <summary>
+/// Test Methods for Heap data structure
+/// </summary>
 void Test_Heap()
 {
 	Heap<int> heap;
@@ -200,8 +202,10 @@ void Test_Heap()
 }
 
 
+
+
+
 void main()
 {
-	Test_Heap();
 	system("pause>0");
 }
