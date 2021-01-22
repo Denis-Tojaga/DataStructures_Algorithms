@@ -6,6 +6,7 @@
 #include "QueueArray.h";
 #include "QueueLinked.h";
 #include "Heap.h";
+#include "PriorityQueueArray.h";
 using namespace std;
 
 
@@ -208,6 +209,53 @@ void Test_Heap()
 	while (!heap.IsEmpty())
 		heap.Remove_From_Heap();
 }
+
+
+
+
+
+
+
+
+
+void Test_PriorityQueue()
+{
+	PriorityQueueArray<int> _priorityQueue;
+	for (int i = 0; i < 10; ++i)
+		_priorityQueue.Add_To_Queue(i);
+
+	for (int i = 0; i < 10; ++i)
+	{
+		cout << "Dodano na kraj reda ->  " << i << endl;
+		prRedSekv->Dodaj(i);
+	}
+
+	prRedSekv->Print();
+
+	for (int i = 0; i < 3; ++i)
+		cout << "Uklonjeno sa pocetka reda-> " << prRedSekv->Ukloni() << endl;
+
+	for (int i = 0; i < 12; ++i)
+		cout << "Uklonjeno sa pocetka reda-> " << prRedSekv->Ukloni() << endl;
+
+	while (!prRedSekv->JelPrazan())
+	{
+		cout << "Uklonjeno sa pocetka reda ->  " << prRedSekv->Ukloni() << endl;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
