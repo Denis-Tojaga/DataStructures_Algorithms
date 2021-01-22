@@ -28,6 +28,9 @@
     <Filter Include="Header Files\HeapHeaders">
       <UniqueIdentifier>{f00d78d0-8b00-41c4-a462-a821263a9a6a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\PriorityQueueHeaders">
+      <UniqueIdentifier>{45994ec9-2320-48b4-9925-8dd449bfdeaa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="Heap.h">
       <Filter>Header Files\HeapHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="PriorityQueueArray.h">
+      <Filter>Header Files\PriorityQueueHeaders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
