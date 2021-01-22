@@ -17,7 +17,7 @@ class PriorityQueueArray : public Queue<T>
 		delete[] _priorityQueue;
 		_priorityQueue = tempQueue;
 		max_size *= 2;
-		cout<<"\nPriority queue max size is -> "<<max_size<<" now.\n"
+		cout << "\nPriority queue max size is -> " << max_size << " now.\n";
 	}
 public:
 	int GetCounter() { return _counter; }
@@ -31,7 +31,7 @@ public:
 
 		_priorityQueue[_counter] = value;
 		_counter++;
-		cout << "\nElement -> | " << _counter[_counter - 1] << " | is added to priority queue.\n";
+		cout << "\nElement -> | " << _priorityQueue[_counter - 1] << " | is added to priority queue.";
 	}
 	T Remove_From_Queue()
 	{
@@ -50,7 +50,7 @@ public:
 
 		_counter--;
 		_priorityQueue[maxIndex] = _priorityQueue[_counter];
-		cout << "\nElement -> | " << maxValue << " | is removed from priority queue.\n";
+		cout << "\nElement -> | " << maxValue << " | is removed from priority queue.";
 		return maxValue;
 	}
 

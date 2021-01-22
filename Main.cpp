@@ -225,23 +225,18 @@ void Test_PriorityQueue()
 		_priorityQueue.Add_To_Queue(i);
 
 	for (int i = 0; i < 10; ++i)
-	{
-		cout << "Dodano na kraj reda ->  " << i << endl;
-		prRedSekv->Dodaj(i);
-	}
+		_priorityQueue.Add_To_Queue(i);
 
-	prRedSekv->Print();
+	_priorityQueue.Print();
 
 	for (int i = 0; i < 3; ++i)
-		cout << "Uklonjeno sa pocetka reda-> " << prRedSekv->Ukloni() << endl;
+		_priorityQueue.Remove_From_Queue();
 
 	for (int i = 0; i < 12; ++i)
-		cout << "Uklonjeno sa pocetka reda-> " << prRedSekv->Ukloni() << endl;
+		_priorityQueue.Remove_From_Queue();
 
-	while (!prRedSekv->JelPrazan())
-	{
-		cout << "Uklonjeno sa pocetka reda ->  " << prRedSekv->Ukloni() << endl;
-	}
+	while (!_priorityQueue.IsEmpty())
+		_priorityQueue.Remove_From_Queue();
 }
 
 
@@ -263,5 +258,6 @@ void Test_PriorityQueue()
 
 void main()
 {
+	Test_PriorityQueue();
 	system("pause>0");
 }
