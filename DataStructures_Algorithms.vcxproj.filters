@@ -77,5 +77,8 @@
     <ClInclude Include="PriorityQueueArray.h">
       <Filter>Header Files\PriorityQueueHeaders</Filter>
     </ClInclude>
+    <ClInclude Include="PrirorityQueueLinked.h">
+      <Filter>Header Files\PriorityQueueHeaders</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

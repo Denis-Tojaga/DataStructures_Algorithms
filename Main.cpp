@@ -217,7 +217,9 @@ void Test_Heap()
 
 
 
-
+/// <summary>
+/// Test methods for Prirority Queue data structure
+/// </summary>
 void Test_PriorityQueue()
 {
 	PriorityQueueArray<int> _priorityQueue;
