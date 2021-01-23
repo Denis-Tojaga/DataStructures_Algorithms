@@ -31,6 +31,9 @@
     <Filter Include="Header Files\PriorityQueueHeaders">
       <UniqueIdentifier>{45994ec9-2320-48b4-9925-8dd449bfdeaa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\SortAlgorithms">
+      <UniqueIdentifier>{30c67cf8-66e7-4875-9235-9e4ef9288a9c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -79,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="PrirorityQueueLinked.h">
       <Filter>Header Files\PriorityQueueHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="BubbleSort.h">
+      <Filter>Header Files\SortAlgorithms</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
