@@ -7,7 +7,10 @@ class PrirorityQueueLinked : public Queue<T>
 {
 	Node<T>* _first;
 	int _counter;
+	void ShowException() { throw exception("Not able to remove elements, because the priority queue is empty!\n"); }
 public:
+	bool IsEmpty() { return _first == nullptr; }
+	bool IsFull() { return false; }
 	PrirorityQueueLinked(): _first(nullptr),_counter(0){}
 
 	void Add_To_Queue(T value)
