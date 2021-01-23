@@ -42,6 +42,7 @@ public:
 		delete tempNode;
 		_counter--;
 		cout << "\nElement -> | " << deletedValue << " | is removed from priority queue.";
+		return deletedValue;
 	}
 
 	T operator[](int index)
@@ -55,6 +56,18 @@ public:
 	}
 	void Print()
 	{
-
+		if (IsEmpty())
+			cout << "\n\nThere is no elements left in priority queue!\n";
+		else
+		{
+			cout << "\n\n\nElements of Priority Queue \n\n";
+			Node<T>* tempNode = _first;
+			while (tempNode->_nextNode != nullptr)
+			{
+				cout << tempNode->value << " | ";
+				tempNode = tempNode->_nextNode;
+			}
+			cout << "\n\n";
+		}
 	}
 };

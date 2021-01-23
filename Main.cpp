@@ -7,6 +7,7 @@
 #include "QueueLinked.h";
 #include "Heap.h";
 #include "PriorityQueueArray.h";
+#include "PrirorityQueueLinked.h";
 using namespace std;
 
 
@@ -220,9 +221,30 @@ void Test_Heap()
 /// <summary>
 /// Test methods for Prirority Queue data structure
 /// </summary>
-void Test_PriorityQueue()
+void Test_PriorityQueueArray()
 {
 	PriorityQueueArray<int> _priorityQueue;
+	for (int i = 0; i < 10; ++i)
+		_priorityQueue.Add_To_Queue(i);
+
+	for (int i = 0; i < 10; ++i)
+		_priorityQueue.Add_To_Queue(i);
+
+	_priorityQueue.Print();
+
+	for (int i = 0; i < 3; ++i)
+		_priorityQueue.Remove_From_Queue();
+
+	for (int i = 0; i < 12; ++i)
+		_priorityQueue.Remove_From_Queue();
+
+	while (!_priorityQueue.IsEmpty())
+		_priorityQueue.Remove_From_Queue();
+}
+void Test_PriorityQueueLinked()
+{
+	PrirorityQueueLinked<int> _priorityQueue;
+
 	for (int i = 0; i < 10; ++i)
 		_priorityQueue.Add_To_Queue(i);
 
@@ -256,10 +278,7 @@ void Test_PriorityQueue()
 
 
 
-
-
 void main()
 {
-	Test_PriorityQueue();
 	system("pause>0");
 }
