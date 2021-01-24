@@ -10,6 +10,7 @@
 #include "PriorityQueueArray.h";
 #include "PrirorityQueueLinked.h";
 #include "BubbleSort.h";
+#include "InsertionSort.h";
 
 using namespace std;
 
@@ -271,13 +272,17 @@ void Test_PriorityQueueLinked()
 
 
 
-
+/// <summary>
+/// Test methods for Sorting Algorithms
+/// </summary>
 void Test_BubbleSort()
 {
 	BubbleSort();
 }
-
-
+void Test_InsertionSort()
+{
+	InsertionSort();
+}
 
 
 
@@ -287,6 +292,5 @@ void Test_BubbleSort()
 
 void main()
 {
-	Test_BubbleSort();
 	system("pause>0");
 }
