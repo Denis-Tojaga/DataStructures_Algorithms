@@ -27,6 +27,10 @@ void BubbleSort(int _array[], int size)
 	}
 
 	cout << "\n\n\n *** BUBBLE SORT ALGORITHM *** \n\n";
-	for
+	for (int i = 0; i < size; i++)
+		cout << _array[i] << " | ";
 
+	cout << "\n\n";
+	cout << "Number of passes for this array -> " << numberOfPasses << endl;
+	cout << "Number of swaps for this array -> " << numberOfSwaps << endl;
 }
