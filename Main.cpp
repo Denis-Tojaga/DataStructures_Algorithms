@@ -1,4 +1,5 @@
 #include<iostream>
+#include<random>
 #include "LinkedList.h";
 #include "ListArray.h";
 #include "StackArray.h";
@@ -8,6 +9,8 @@
 #include "Heap.h";
 #include "PriorityQueueArray.h";
 #include "PrirorityQueueLinked.h";
+#include "BubbleSort.h";
+
 using namespace std;
 
 
@@ -269,6 +272,10 @@ void Test_PriorityQueueLinked()
 
 
 
+void Test_BubbleSort()
+{
+	BubbleSort();
+}
 
 
 
@@ -280,5 +287,6 @@ void Test_PriorityQueueLinked()
 
 void main()
 {
+	Test_BubbleSort();
 	system("pause>0");
 }
