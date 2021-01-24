@@ -145,6 +145,7 @@
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="HeapBase.h" />
+    <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="PriorityQueueArray.h" />
     <ClInclude Include="PrirorityQueueLinked.h" />
