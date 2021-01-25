@@ -11,6 +11,7 @@
 #include "PrirorityQueueLinked.h";
 #include "BubbleSort.h";
 #include "InsertionSort.h";
+#include "SelectionSort.h";
 
 using namespace std;
 
@@ -285,7 +286,7 @@ void Test_InsertionSort()
 }
 void Test_SelectionSort()
 {
-
+	SelectionSort();
 }
 
 
