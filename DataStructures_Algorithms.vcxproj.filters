@@ -89,5 +89,8 @@
     <ClInclude Include="InsertionSort.h">
       <Filter>Header Files\SortAlgorithms</Filter>
     </ClInclude>
+    <ClInclude Include="SelectionSort.h">
+      <Filter>Header Files\SortAlgorithms</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
