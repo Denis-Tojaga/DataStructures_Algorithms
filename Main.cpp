@@ -283,6 +283,10 @@ void Test_InsertionSort()
 {
 	InsertionSort();
 }
+void Test_SelectionSort()
+{
+
+}
 
 
 
