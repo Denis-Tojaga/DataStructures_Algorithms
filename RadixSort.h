@@ -55,9 +55,6 @@ int GetMaxValue(int* _array, int size)
 	return maxValue;
 }
 
-
-
-
 void RadixSort()
 {
 	//---------Creation of the array -----------------
@@ -77,11 +74,15 @@ void RadixSort()
 	while (maxValue > 0)
 	{
 		RecursiveFunction(_array, size, exponent);
+		int digitNumber = exponent;
+		cout << "\n\n\n *** ARRAY SORTED BY "<<digitNumber<<" *** \n\n";
+		for (int i = 0; i < size; i++)
+			cout << _array[i] << " | ";
+		cout << "\n\n";
+
 		exponent = exponent * 10;
 		maxValue = maxValue / 10;
 	}
-
-
 
 	
 	cout << "\n\n\n *** RADIX SORT ALGORITHM *** \n\n";
