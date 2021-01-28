@@ -98,5 +98,8 @@
     <ClInclude Include="BucketSort.h">
       <Filter>Header Files\SortAlgorithms</Filter>
     </ClInclude>
+    <ClInclude Include="HeapSort.h">
+      <Filter>Header Files\SortAlgorithms</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
