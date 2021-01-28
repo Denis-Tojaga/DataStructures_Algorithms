@@ -13,6 +13,7 @@
 #include "InsertionSort.h";
 #include "SelectionSort.h";
 #include "RadixSort.h";
+#include "BucketSort.h";
 
 using namespace std;
 
@@ -293,6 +294,10 @@ void Test_RadixSort()
 {
 	RadixSort();
 }
+void Test_BucketSort()
+{
+	BucketSort();
+}
 
 
 
@@ -301,6 +306,6 @@ void Test_RadixSort()
 
 void main()
 {
-	Test_RadixSort();
+	Test_BucketSort();
 	system("pause>0");
 }

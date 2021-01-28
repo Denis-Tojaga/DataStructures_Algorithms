@@ -14,9 +14,6 @@ int MaxValue(int arr[], int size)
 			maxValue = arr[i];
 	return maxValue;
 }
-
-
-
 void BucketSort()
 {
 	//---------Creation of the array -----------------
@@ -28,9 +25,10 @@ void BucketSort()
 	cout << "\n *** Unsorted array *** \n\n";
 	for (int i = 0; i < 10; i++)
 		cout << _array[i] << " | ";
+	cout << "\n\n";
 	//-------------------------------------------
 
-
+	//Create an array of priorityQueues (buckets)
 	PrirorityQueueLinked<int>* Queues = new PrirorityQueueLinked<int>[size];
 
 	int maxValue = MaxValue(_array, size);
@@ -38,6 +36,7 @@ void BucketSort()
 	{
 		int location = (_array[i] * size) / (maxValue + 1);
 		Queues[location].Add_To_Queue(_array[i]);
+		cout << "\nOn location -> " << i << "\n";
 	}
 
 	int _counter = size - 1;
