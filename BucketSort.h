@@ -40,9 +40,28 @@ void BucketSort()
 		Queues[location].Add_To_Queue(_array[i]);
 	}
 
+	int _counter = size - 1;
+
+	for (int i = size - 1; i >= 0; i--)
+	{
+		//we grab the original queue on specific location (from last to first) from "Queues" array 
+		PrirorityQueueLinked<int>& remover = Queues[i];
+
+		while (!remover.IsEmpty())
+		{
+			//we remove the biggest value from that specific priorityQueue
+			int removedValue = remover.Remove_From_Queue();
+
+			//after removing it, we put it in main array on the last location as sorted element
+			_array[_counter] = removedValue;
+			_counter--;
+		}
+	}
 
 
-	int _counter = 
+	cout << "\n\n\n *** BUCKET SORT ALGORITHM *** \n\n";
+	for (int i = 0; i < size; i++)
+		cout << _array[i] << " | ";
 
-
+	cout << "\n\n";
 }
