@@ -95,5 +95,8 @@
     <ClInclude Include="RadixSort.h">
       <Filter>Header Files\SortAlgorithms</Filter>
     </ClInclude>
+    <ClInclude Include="BucketSort.h">
+      <Filter>Header Files\SortAlgorithms</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
