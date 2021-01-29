@@ -157,6 +157,7 @@
     <ClInclude Include="NodeBase.h" />
     <ClInclude Include="QueueArray.h" />
     <ClInclude Include="QueueBase.h" />
+    <ClInclude Include="QuickSort.h" />
     <ClInclude Include="RadixSort.h" />
     <ClInclude Include="SelectionSort.h" />
     <ClInclude Include="StackArray.h" />

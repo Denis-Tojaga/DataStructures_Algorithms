@@ -15,6 +15,7 @@
 #include "RadixSort.h";
 #include "BucketSort.h";
 #include "HeapSort.h";
+#include "QuickSort.h";
 
 using namespace std;
 
@@ -303,7 +304,10 @@ void Test_HeapSort()
 {
 	HeapSort();
 }
-
+void Test_QuickSort()
+{
+	QuickSort();
+}
 
 
 
