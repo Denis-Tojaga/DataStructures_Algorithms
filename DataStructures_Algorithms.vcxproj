@@ -149,6 +149,7 @@
     <ClInclude Include="HeapSort.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="MergeSort.h" />
     <ClInclude Include="PriorityQueueArray.h" />
     <ClInclude Include="PrirorityQueueLinked.h" />
     <ClInclude Include="QueueLinked.h" />
