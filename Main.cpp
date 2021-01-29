@@ -16,6 +16,7 @@
 #include "BucketSort.h";
 #include "HeapSort.h";
 #include "QuickSort.h";
+#include "MergeSort.h";
 
 using namespace std;
 
@@ -308,11 +309,15 @@ void Test_QuickSort()
 {
 	QuickSort();
 }
-
+void Test_MergeSort()
+{
+	MergeAlgorithm();
+}
 
 
 
 void main()
 {
+	Test_MergeSort();
 	system("pause>0");
 }
