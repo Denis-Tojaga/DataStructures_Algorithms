@@ -86,8 +86,6 @@ void Test_LinkedList()
 
 
 
-
-
 /// <summary>
 /// Test Methods for Stack data struture
 /// </summary>
@@ -143,8 +141,6 @@ void Test_StackLinked()
 
 
 
-
-
 /// <summary>
 /// Test Methods for Queue data structure
 /// </summary>
@@ -196,7 +192,6 @@ void Test_QueueLinked()
 
 
 
-
 /// <summary>
 /// Test Methods for Heap data structure
 /// </summary>
@@ -220,8 +215,6 @@ void Test_Heap()
 	while (!heap.IsEmpty())
 		heap.Remove_From_Heap();
 }
-
-
 
 
 
@@ -277,7 +270,6 @@ void Test_PriorityQueueLinked()
 
 
 
-
 /// <summary>
 /// Test methods for Sorting Algorithms
 /// </summary>
@@ -293,6 +285,10 @@ void Test_SelectionSort()
 {
 	SelectionSort();
 }
+void Test_HeapSort()
+{
+	HeapSort();
+}
 void Test_RadixSort()
 {
 	RadixSort();
@@ -300,10 +296,6 @@ void Test_RadixSort()
 void Test_BucketSort()
 {
 	BucketSort();
-}
-void Test_HeapSort()
-{
-	HeapSort();
 }
 void Test_QuickSort()
 {
@@ -316,8 +308,100 @@ void Test_MergeSort()
 
 
 
+
+
+
+
 void main()
 {
-	Test_MergeSort();
+	int userEntry;
+	do
+	{
+		cout << "***** Hello please select which data structure / algorithm you want to test ? *****\n\n";
+		cout << "*** DATA STRUCTURES MENU *** \n\n";
+
+		cout << "1.  Test * LIST SEQUENCE *\n";
+		cout << "2.  Test * LIST LINKED *\n\n";
+		cout << "3.  Test * STACK SEQUENCE *\n";
+		cout << "4.  Test * STACK LINKED *\n\n";
+		cout << "5.  Test * QUEUE SEQUENCE *\n";
+		cout << "6.  Test * QUEUE LINKED *\n\n";
+		cout << "7.  Test * PRIORITY QUEUE SEQUENCE *\n";
+		cout << "8.  Test * PRIORITY QUEUE LINKED *\n\n";
+		cout << "9.  Test * HEAP *\n";
+
+
+
+		cout << "\n*** ALGORITHMS MENU *** \n\n";
+
+		cout << "10.  Test * BUBBLE SORT *\n";
+		cout << "11.  Test * INSERTION SORT *\n\n";
+		cout << "12.  Test * SELECTION SORT *\n";
+		cout << "13.  Test * HEAP SORT *\n\n";
+		cout << "14.  Test * RADIX SORT *\n";
+		cout << "15.  Test * BUCKET SORT *\n\n";
+		cout << "16.  Test * QUICK SORT *\n";
+		cout << "17.  Test * MERGE SORT *\n\n\n\n";
+
+		cout << "0. ***** EXIT\n";
+
+
+		cin >> userEntry;
+
+		do
+		{
+			cout << "Niste unijeli validan broj!\nPokusajte ponovo!\n";
+			cin >> userEntry;
+
+		} while (userEntry>17);
+
+		
+		system("cls");
+
+
+		if(userEntry)
+		switch (userEntry)
+		{
+		case 1: Test_ListArray();
+			break;
+		case 2: Test_LinkedList();
+			break;
+		case 3: Test_StackArray();
+			break;
+		case 4: Test_StackLinked();
+			break;
+		case 5: Test_QueueArray();
+			break;
+		case 6: Test_QueueLinked();
+			break;
+		case 7: Test_Heap();
+			break;
+		case 8: Test_PriorityQueueArray();
+			break;
+		case 9: Test_PriorityQueueLinked();
+			break;
+		//case 10: Test_ListArray();
+		//	break;
+		//case 11: Test_ListArray();
+		//	break;
+		//case 12: Test_ListArray();
+		//	break;
+		//case 13: Test_ListArray();
+		//	break;
+		//case 14: Test_ListArray();
+		//	break;
+		//case 15: Test_ListArray();
+		//	break;
+		//case 16: Test_ListArray();
+		//	break;
+		//case 17: Test_ListArray();
+		//	break;
+		default:
+			break;
+		}
+
+
+
+	} while (userEntry!=0);
 	system("pause>0");
 }
