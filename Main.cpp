@@ -314,6 +314,5 @@ void Test_QuickSort()
 
 void main()
 {
-	Test_HeapSort();
 	system("pause>0");
 }

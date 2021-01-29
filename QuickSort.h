@@ -4,7 +4,7 @@ using namespace std;
 
 
 
-int Partition(int array[],const int low,const int high)
+int Partition(int array[], const int low, const int high)
 {
 	int pivotElement = array[low];
 	int i = low, j = high;
@@ -13,24 +13,23 @@ int Partition(int array[],const int low,const int high)
 		do
 		{
 			i++;
-		} while (array[i]<=pivotElement);
+		} while (array[i] <= pivotElement);
 
 		do
 		{
 			j--;
-		} while (array[j]>pivotElement);
+		} while (array[j] > pivotElement);
 
 		if (i < j)
-		{
-			int tempValue = array[i];
-			array[i]= 
-		}
+			swap(array[i], array[j]);
 	}
 
+	swap(array[low], array[j]);
+	return j;
 }
 
 
-void Quick(int array[],const int low,const int high)
+void Quick(int array[], const int low, const int high)
 {
 	int locationOfPartition;
 	//makes sure that there are minimum 2 elements in the array
@@ -57,12 +56,12 @@ void QuickSort()
 	cout << "\n\n";
 	//-------------------------------------------
 
-
-	
-
+	Quick(_array, 0, size);
 
 
+	cout << "\n\n\n *** QUICK SORT ALGORITHM *** \n\n";
+	for (int i = 0; i < size; i++)
+		cout << _array[i] << " | ";
 
-
-
+	cout << "\n\n";
 }
