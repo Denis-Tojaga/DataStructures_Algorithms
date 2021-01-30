@@ -9,7 +9,47 @@ class LinkedList : public List<T>
 	int _counter = 0;
 	void ShowException() { throw std::exception("*** The linked list is empty!***\n"); }
 public:
-	
+	T Remove_By_Index(int index) { return 0; }
+	T Remove_By_Key(T value)
+	{
+		Node<T>* tempNode = _first;
+		Node<T>* before = nullptr;
+		Node<T>* after = nullptr;
+		while (tempNode != nullptr && tempNode->value != value)
+		{
+			before = tempNode;
+			tempNode = tempNode->_nextNode;
+			after = tempNode->_nextNode;
+		}
+
+		if (tempNode->value == value)
+		{
+			T removedValue = tempNode->value;
+			delete tempNode;
+			if (before != nullptr)
+				before->_nextNode = after;
+			else
+				_first = after;
+			_counter--;
+			return removedValue;
+		}
+		else
+		{
+			cout << "\nThe node with that value was not found!\n";
+			return -1;
+		}
+	}
+	bool Search_By_Key(T value)
+	{
+		Node<T>* tempNode = _first;
+		while (tempNode != nullptr && tempNode->value != value)
+			tempNode = tempNode->_nextNode;
+
+		if (tempNode->value == value)
+			return true;
+		else
+			return false;
+	}
 	bool IsFull() { return false; }
 	int GetCounter() { return _counter; }
 	bool IsEmpty() { return _first == nullptr; }

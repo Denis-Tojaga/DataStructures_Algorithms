@@ -21,4 +21,7 @@ public:
 	virtual bool IsEmpty() = 0;
 	virtual bool IsFull() = 0;
 	virtual T operator[](int index) = 0;
+	virtual T Remove_By_Index(int index) = 0;
+	virtual T Remove_By_Key(T value) = 0;
+	virtual bool Search_By_Key(T value) = 0;
 };

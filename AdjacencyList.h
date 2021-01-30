@@ -1,7 +1,10 @@
 #pragma once
-#include "Edge.h";
-#include "ListArray.h";
+#include<iostream>
 #include<sstream>
+#include "Edge.h";
+#include "ListBase.h";
+#include "ListArray.h";
+using namespace std;
 
 template<class T>
 class AdjacencyList
@@ -12,12 +15,12 @@ public:
 	{
 		matrixEdges.Add_On_End(edge);
 	}
-
 	void AddEdge(const T& start, const T& end, int weight = 0)
 	{
 		matrixEdges.Add_On_End(Edge<T>(start, end, weight));
 	}
 
+	//Removes the specified edge 
 	void RemoveByKey(const Edge<T>& edge)
 	{
 
@@ -27,6 +30,7 @@ public:
 			cout << "\nEdge not found!\n";
 	}
 
+	//Removes the edge on the specific index 
 	Edge<T> RemoveByIndex(int index)
 	{
 		return matrixEdges.Remove_By_Index(index);
@@ -41,20 +45,15 @@ public:
 	}
 
 	ListArray<Edge<T>>& GetEdges() { return matrixEdges; }
-
-
 	string toString()const {
 		stringstream ss;
 		for (int i = 0; i < matrixEdges._counter; i++)
 			ss << matrixEdges[i] << endl;
 		return ss.str();
 	}
-
-
 	friend ostream& operator<<(ostream& COUT, const AdjacencyList& obj)
 	{
 		COUT << obj.toString();
 		return COUT;
 	}
-
 };

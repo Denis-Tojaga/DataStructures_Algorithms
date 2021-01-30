@@ -1,5 +1,6 @@
 #pragma once
 #include "ListBase.h";
+#include<stdlib.h>
 
 
 template<class T>
@@ -86,18 +87,19 @@ public:
 	{
 		if (index<0 || index>_counter)
 		{
-			cout<<"Cannot remove element, index is not valid!\n");
+			cout << "Cannot remove element, index is not valid!\n";
 			return -1;
 		}
 
 		T removedValue = _arr[index];
 
-		for (int i = index; i < _counter-1; i++)
+		for (int i = index; i < _counter - 1; i++)
 			_arr[i] = _arr[i + 1];
 
 		_counter--;
 		return removedValue;
 	}
+
 	T Remove_By_Key(T value)
 	{
 		int valueIndex = -1;
@@ -130,7 +132,7 @@ public:
 
 		cout << "\n\n*** Element of a LIST ARRAY *** \n";
 
-		for (int i = 0; i < _counter; i++)
+		for (int i = 0; i < GetCounter(); i++)
 			cout << _arr[i] << " | ";
 		cout << "\n\n\n";
 	}
