@@ -3,7 +3,7 @@
 ## Data Structures 
 
 ### Lists
-- [Sequentional List](./src/DataStructures_Algorithms/ListHeaders/ListArray.h)
+- [Sequentional List](./ListArray.h)
 - [Linked List](./src/DataStructures_Algorithms/ListHeaders/ListLinked.h)
 
 ### * Linked List
