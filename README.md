@@ -2,12 +2,16 @@
 
 ## Data Structures 
 
-### Lists
-- [Sequentional List](./ListArray.h)
-- [Linked List](./src/DataStructures_Algorithms/ListHeaders/ListLinked.h)
+### List
+#### - [Sequentional List](./ListArray.h)
+#### - [Linked List](./ListLinked.h)
+<br>
 
-### * Linked List
-### * Sequentional stack
+### Stack
+#### - [Sequentional List](./StackArray.h)
+#### - [Linked List](./StackLinked.h)
+<br>
+
 ### * Linked stack
 ### * Sequentional queue
 ### * Linked queue
