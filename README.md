@@ -1,6 +1,6 @@
 # Implementation of all Data Structures and Algorithms
 
-## Data Structures implemented
+## Data Structures 
 ### * Sequential list
 ### * Linked List
 ### * Sequentional stack
