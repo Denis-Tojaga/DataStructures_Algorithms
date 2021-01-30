@@ -82,6 +82,43 @@ public:
 		return _arr[index];
 	}
 
+	T Remove_By_Index(int index)
+	{
+		if (index<0 || index>_counter)
+		{
+			cout<<"Cannot remove element, index is not valid!\n");
+			return -1;
+		}
+
+		T removedValue = _arr[index];
+
+		for (int i = index; i < _counter-1; i++)
+			_arr[i] = _arr[i + 1];
+
+		_counter--;
+		return removedValue;
+	}
+	T Remove_By_Key(T value)
+	{
+		int valueIndex = -1;
+		for (int i = 0; i < _counter; i++)
+			if (_arr[i] == value)
+				valueIndex = i;
+
+		if (valueIndex != -1)
+			return Remove_By_Index(valueIndex);
+		else
+			return -1;
+	}
+
+	bool Search_By_Key(T value)
+	{
+		for (int i = 0; i < _counter; i++)
+			if (_arr[i] == value)
+				return true;
+		return false;
+	}
+
 	//prints out all elements currently in the list
 	void Print()
 	{
