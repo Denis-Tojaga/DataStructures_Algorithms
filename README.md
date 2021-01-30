@@ -1,15 +1,17 @@
 # Implementation of all Data Structures and Algorithms
 
-## Data Structures 
+# Data Structures 
+## List
 
-### List
-#### - [Sequentional List](./ListArray.h)
-#### - [Linked List](./ListLinked.h)
+### - [Sequentional List](./ListArray.h)
+### - [Linked List](./ListLinked.h)
+
 <br>
 
-### Stack
-#### - [Sequentional List](./StackArray.h)
-#### - [Linked List](./StackLinked.h)
+## Stack
+### - [Sequentional Stack](./StackArray.h)
+### - [Linked Stack](./StackLinked.h)
+
 <br>
 
 ### * Linked stack
