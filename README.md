@@ -4,9 +4,8 @@
 ## List
 
 ### - [Sequentional List](./ListArray.h)
-### - [Linked List](./ListLinked.h)
+### - [Linked List](./LinkedList.h)
 
-<br>
 
 ## Stack
 ### - [Sequentional Stack](./StackArray.h)
