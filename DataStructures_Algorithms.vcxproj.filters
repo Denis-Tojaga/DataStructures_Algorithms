@@ -34,6 +34,9 @@
     <Filter Include="Header Files\SortAlgorithms">
       <UniqueIdentifier>{30c67cf8-66e7-4875-9235-9e4ef9288a9c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Graph">
+      <UniqueIdentifier>{2fd1a9ba-ee07-4b53-b197-526ca5933dec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="MergeSort.h">
       <Filter>Header Files\SortAlgorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Edge.h">
+      <Filter>Header Files\Graph</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

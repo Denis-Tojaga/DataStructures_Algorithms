@@ -19,9 +19,7 @@
 #include "HeapSort.h";
 #include "QuickSort.h";
 #include "MergeSort.h";
-
 using namespace std;
-
 
 /// <summary>
 /// Test Methods for List data structure
@@ -86,8 +84,6 @@ void Test_LinkedList()
 }
 
 
-
-
 /// <summary>
 /// Test Methods for Stack data struture
 /// </summary>
@@ -141,8 +137,6 @@ void Test_StackLinked()
 }
 
 
-
-
 /// <summary>
 /// Test Methods for Queue data structure
 /// </summary>
@@ -192,8 +186,6 @@ void Test_QueueLinked()
 }
 
 
-
-
 /// <summary>
 /// Test Methods for Heap data structure
 /// </summary>
@@ -217,9 +209,6 @@ void Test_Heap()
 	while (!heap.IsEmpty())
 		heap.Remove_From_Heap();
 }
-
-
-
 
 
 
@@ -270,8 +259,6 @@ void Test_PriorityQueueLinked()
 
 
 
-
-
 /// <summary>
 /// Test methods for Sorting Algorithms
 /// </summary>
@@ -307,6 +294,10 @@ void Test_MergeSort()
 {
 	MergeAlgorithm();
 }
+
+
+
+
 
 
 
