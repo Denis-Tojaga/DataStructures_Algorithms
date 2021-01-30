@@ -1,5 +1,7 @@
 #include<iostream>
 #include<random>
+#include<cstdlib>
+#include<thread>
 #include "LinkedList.h";
 #include "ListArray.h";
 #include "StackArray.h";
@@ -317,91 +319,224 @@ void main()
 	int userEntry;
 	do
 	{
-		cout << "***** Hello please select which data structure / algorithm you want to test ? *****\n\n";
-		cout << "*** DATA STRUCTURES MENU *** \n\n";
+		std::cout << "***** Hello please select which data structure / algorithm you want to test ? *****\n\n";
+		std::cout << "*** DATA STRUCTURES MENU *** \n\n";
 
-		cout << "1.  Test * LIST SEQUENCE *\n";
-		cout << "2.  Test * LIST LINKED *\n\n";
-		cout << "3.  Test * STACK SEQUENCE *\n";
-		cout << "4.  Test * STACK LINKED *\n\n";
-		cout << "5.  Test * QUEUE SEQUENCE *\n";
-		cout << "6.  Test * QUEUE LINKED *\n\n";
-		cout << "7.  Test * PRIORITY QUEUE SEQUENCE *\n";
-		cout << "8.  Test * PRIORITY QUEUE LINKED *\n\n";
-		cout << "9.  Test * HEAP *\n";
-
-
-
-		cout << "\n*** ALGORITHMS MENU *** \n\n";
-
-		cout << "10.  Test * BUBBLE SORT *\n";
-		cout << "11.  Test * INSERTION SORT *\n\n";
-		cout << "12.  Test * SELECTION SORT *\n";
-		cout << "13.  Test * HEAP SORT *\n\n";
-		cout << "14.  Test * RADIX SORT *\n";
-		cout << "15.  Test * BUCKET SORT *\n\n";
-		cout << "16.  Test * QUICK SORT *\n";
-		cout << "17.  Test * MERGE SORT *\n\n\n\n";
-
-		cout << "0. ***** EXIT\n";
+		std::cout << "1.  Test * LIST SEQUENCE *\n";
+		std::cout << "2.  Test * LIST LINKED *\n\n";
+		std::cout << "3.  Test * STACK SEQUENCE *\n";
+		std::cout << "4.  Test * STACK LINKED *\n\n";
+		std::cout << "5.  Test * QUEUE SEQUENCE *\n";
+		std::cout << "6.  Test * QUEUE LINKED *\n\n";
+		std::cout << "7.  Test * PRIORITY QUEUE SEQUENCE *\n";
+		std::cout << "8.  Test * PRIORITY QUEUE LINKED *\n\n";
+		std::cout << "9.  Test * HEAP *\n";
 
 
+
+		std::cout << "\n*** ALGORITHMS MENU *** \n\n";
+
+		std::cout << "10.  Test * BUBBLE SORT *\n";
+		std::cout << "11.  Test * INSERTION SORT *\n\n";
+		std::cout << "12.  Test * SELECTION SORT *\n";
+		std::cout << "13.  Test * HEAP SORT *\n\n";
+		std::cout << "14.  Test * RADIX SORT *\n";
+		std::cout << "15.  Test * BUCKET SORT *\n\n";
+		std::cout << "16.  Test * QUICK SORT *\n";
+		std::cout << "17.  Test * MERGE SORT *\n\n\n\n";
+
+		std::cout << "0. ***** EXIT\n\n";
+
+
+		std::cout << "*** Please enter number to test methods *** \n";
 		cin >> userEntry;
 
-		do
-		{
-			cout << "Niste unijeli validan broj!\nPokusajte ponovo!\n";
-			cin >> userEntry;
+		std::system("cls");
 
-		} while (userEntry>17);
+		char _continue;
 
-		
-		system("cls");
-
-
-		if(userEntry)
 		switch (userEntry)
 		{
-		case 1: Test_ListArray();
-			break;
+		case 1:
+			Test_ListArray();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
 		case 2: Test_LinkedList();
-			break;
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+
 		case 3: Test_StackArray();
-			break;
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
 		case 4: Test_StackLinked();
-			break;
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
 		case 5: Test_QueueArray();
-			break;
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
 		case 6: Test_QueueLinked();
-			break;
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
 		case 7: Test_Heap();
-			break;
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
 		case 8: Test_PriorityQueueArray();
-			break;
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
 		case 9: Test_PriorityQueueLinked();
-			break;
-		//case 10: Test_ListArray();
-		//	break;
-		//case 11: Test_ListArray();
-		//	break;
-		//case 12: Test_ListArray();
-		//	break;
-		//case 13: Test_ListArray();
-		//	break;
-		//case 14: Test_ListArray();
-		//	break;
-		//case 15: Test_ListArray();
-		//	break;
-		//case 16: Test_ListArray();
-		//	break;
-		//case 17: Test_ListArray();
-		//	break;
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 10: Test_BubbleSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 11: Test_InsertionSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 12: Test_SelectionSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 13: Test_HeapSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 14: Test_RadixSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 15: Test_BucketSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 16: Test_QuickSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 17: Test_MergeSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
 		default:
 			break;
 		}
 
 
+	} while (userEntry != 0);
 
-	} while (userEntry!=0);
-	system("pause>0");
+	std::cout << "*** THANKS FOR USING THIS ***\n";
+
+	std::system("pause>0");
 }
