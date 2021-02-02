@@ -116,5 +116,8 @@
     <ClInclude Include="AdjacencyList.h">
       <Filter>Header Files\Graph</Filter>
     </ClInclude>
+    <ClInclude Include="AdjacencyMatrix.h">
+      <Filter>Header Files\Graph</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

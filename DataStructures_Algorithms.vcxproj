@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdjacencyList.h" />
+    <ClInclude Include="AdjacencyMatrix.h" />
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="BucketSort.h" />
     <ClInclude Include="Edge.h" />
