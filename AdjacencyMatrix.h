@@ -100,6 +100,21 @@ public:
 		delete[] tempMatrix;
 	}
 
+	void AddEdge(int i, int j, T weight)
+	{
+		matrix[i][j] = weight;
+	}
+
+	T& GetEdgeWeight(int from,int to)
+	{
+		return matrix[from][to];
+	}
+
+	bool isNeigbour(int from, int to)
+	{
+		return matrix[from][to] > 0;
+	}
+
 
 	string printMatrix()const
 	{
