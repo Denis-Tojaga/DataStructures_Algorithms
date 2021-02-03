@@ -16,31 +16,80 @@ class AdjacencyMatrix
 {
 	T** matrix;
 	int _nodeCounter;
-public:
-	const int _size;
-
-	AdjacencyMatrix(int size) : _size(size)
+	void AlocateMatrix()
 	{
-		matrix = new T[size];
-		for (int i = 0; i < size; i++)
+		matrix = new T[_nodeCounter];
+		for (int i = 0; i < _nodeCounter; i++)
 		{
-			matrix[i] = new T[size];
-			for (int j = 0; j < size; j++)
+			matrix[i] = new T[_nodeCounter];
+			for (int j = 0; j < _nodeCounter; j++)
 				matrix[i][j] = 0;
 		}
+	}
+
+	void copy(const AdjacencyMatrix& obj)
+	{
+
+	}
+
+public:
+	const int GetCounter() { return _nodeCounter; }
+
+	AdjacencyMatrix(int nodeCount=0) : _nodeCounter(nodeCount)
+	{
+		if (nodeCount > 0)
+			AlocateMatrix();
+		else
+			matrix = nullptr;
 	}
 
 	void LoadExistingMatrix(string fileName)
 	{
 		ifstream fin(fileName);
-		for (int i = 0; i < _size; i++)
-			for (int j = 0; j < _size; j++)
+		for (int i = 0; i < _nodeCounter; i++)
+			for (int j = 0; j < _nodeCounter; j++)
 			{
 				T value;//Create place for value
 				fin >> value;//Read value from the given file 
 				matrix[i][j] = value;//Place value from the file on the right position in matrix
 			}
 		fin.close();//after reading close the file
+	}
+
+
+	T& operator()(int a, int b)
+	{
+		return matrix[a][b];
+	}
+
+
+	string printMatrix()const
+	{
+		cout << "*** Adjacency Matrix *** \n\n";
+		cout << " SIZE -> " << _size << endl;
+		stringstream ss;
+
+		for (int i = 0; i < _nodeCounter; i++)
+			ss << i << " | ";
+
+		ss << endl << string(_nodeCounter * 4 + 3, '-') << endl;
+
+		for (int i = 0; i <_nodeCounter; i++)
+		{
+			ss << i << " | ";
+			for (int j = 0; j < _nodeCounter; j++)
+				ss << matrix[i][j] << " | ";
+			ss << endl;
+		}
+
+		ss << endl;
+		return ss.str();
+	}
+
+	friend ostream& operator<<(ostream& COUT, const AdjacencyMatrix& obj)
+	{
+		COUT << obj.printMatrix();
+		return COUT;
 	}
 
 };
