@@ -29,11 +29,15 @@ class AdjacencyMatrix
 
 	void copy(const AdjacencyMatrix& obj)
 	{
-
+		_nodeCounter = obj._nodeCounter;
+		AlocateMatrix();
+		for (int i = 0; i < _nodeCounter; i++)
+			for (int j = 0; j < _nodeCounter; j++)
+				matrix[i][j] = obj.matrix[i][j];
 	}
 
 public:
-	const int GetCounter() { return _nodeCounter; }
+	 int GetCounter() { return _nodeCounter; }
 
 	AdjacencyMatrix(int nodeCount=0) : _nodeCounter(nodeCount)
 	{
@@ -41,6 +45,11 @@ public:
 			AlocateMatrix();
 		else
 			matrix = nullptr;
+	}
+
+	AdjacencyMatrix(const AdjacencyMatrix& obj)
+	{
+		copy(obj);
 	}
 
 	void LoadExistingMatrix(string fileName)
@@ -84,6 +93,14 @@ public:
 
 		ss << endl;
 		return ss.str();
+	}
+
+	void Dealocate()
+	{
+		//Dealocation of an existing matrix
+		for (int i = 0; i < _nodeCounter; i++)
+			delete[] matrix[i];
+		delete[] matrix;
 	}
 
 	friend ostream& operator<<(ostream& COUT, const AdjacencyMatrix& obj)
