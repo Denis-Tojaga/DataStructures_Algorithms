@@ -26,7 +26,16 @@ class AdjacencyMatrix
 				matrix[i][j] = 0;
 		}
 	}
-
+	void AlocateMatrix(ifstream& file)
+	{
+		matrix = new T[_nodeCounter];
+		for (int i = 0; i < _nodeCounter; i++)
+		{
+			matrix[i] = new T[_nodeCounter];
+			for (int j = 0; j < _nodeCounter; j++)
+				file >> matrix[i][j];
+		}
+	}
 	void copy(const AdjacencyMatrix& obj)
 	{
 		_nodeCounter = obj._nodeCounter;
@@ -46,29 +55,49 @@ public:
 		else
 			matrix = nullptr;
 	}
-
 	AdjacencyMatrix(const AdjacencyMatrix& obj)
 	{
 		copy(obj);
 	}
-
-	void LoadExistingMatrix(string fileName)
+	AdjacencyMatrix& operator=(const AdjacencyMatrix& obj)
 	{
-		ifstream fin(fileName);
-		for (int i = 0; i < _nodeCounter; i++)
-			for (int j = 0; j < _nodeCounter; j++)
-			{
-				T value;//Create place for value
-				fin >> value;//Read value from the given file 
-				matrix[i][j] = value;//Place value from the file on the right position in matrix
-			}
-		fin.close();//after reading close the file
+		if (this != &obj)
+		{
+			Dealocate();
+			copy(obj);
+		}
+		return *this;
 	}
 
+	void LoadFromFile(string fileName)
+	{
+		if (matrix != nullptr)
+			Dealocate();
 
+		ifstream inputFile;
+		inputFile.open(fileName);
+		inputFile >> _nodeCounter;
+		AlocateMatrix(inputFile);
+		inputFile.close();//after reading close the file
+	}
 	T& operator()(int a, int b)
 	{
 		return matrix[a][b];
+	}
+
+
+	void AddNode()
+	{
+		T** tempMatrix = matrix;
+		_nodeCounter++;
+		AlocateMatrix();
+		for (int i = 0; i < _nodeCounter-1; i++)
+			for (int j = 0; j < _nodeCounter-1; j++)
+				matrix[i][j] = tempMatrix[i][j];
+
+		for (int i = 0; i < _nodeCounter-1; i++)
+			delete[] tempMatrix[i];
+		delete[] tempMatrix;
 	}
 
 
@@ -94,7 +123,6 @@ public:
 		ss << endl;
 		return ss.str();
 	}
-
 	void Dealocate()
 	{
 		//Dealocation of an existing matrix
@@ -102,7 +130,6 @@ public:
 			delete[] matrix[i];
 		delete[] matrix;
 	}
-
 	friend ostream& operator<<(ostream& COUT, const AdjacencyMatrix& obj)
 	{
 		COUT << obj.printMatrix();
