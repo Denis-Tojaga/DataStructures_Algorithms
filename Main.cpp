@@ -306,8 +306,10 @@ void Test_AdjacencyMatrix()
 	matrix.LoadFromFile("Matrica4.txt");
 	matrix.printMatrix();
 
+	cout << "\n\nNumber of neigbours from the node  0 is -> " << matrix.FromNeigbourCounter(0) << endl;
+	cout << "\n\nNumber of neigbours to the node  0 is -> " << matrix.ToNeigboursCounter(0) << endl;
 
-
+	cout << endl;
 }
 
 
@@ -321,30 +323,25 @@ void main()
 	do
 	{
 		std::cout << "***** Hello please select which data structure / algorithm you want to test ? *****\n\n";
-		std::cout << "*** DATA STRUCTURES MENU *** \n\n";
 
 		std::cout << "1.  Test * LIST SEQUENCE *\n";
-		std::cout << "2.  Test * LIST LINKED *\n\n";
+		std::cout << "2.  Test * LIST LINKED *\n";
 		std::cout << "3.  Test * STACK SEQUENCE *\n";
-		std::cout << "4.  Test * STACK LINKED *\n\n";
+		std::cout << "4.  Test * STACK LINKED *\n";
 		std::cout << "5.  Test * QUEUE SEQUENCE *\n";
-		std::cout << "6.  Test * QUEUE LINKED *\n\n";
+		std::cout << "6.  Test * QUEUE LINKED *\n";
 		std::cout << "7.  Test * PRIORITY QUEUE SEQUENCE *\n";
-		std::cout << "8.  Test * PRIORITY QUEUE LINKED *\n\n";
+		std::cout << "8.  Test * PRIORITY QUEUE LINKED *\n";
 		std::cout << "9.  Test * HEAP *\n";
-
-
-
-		std::cout << "\n*** ALGORITHMS MENU *** \n\n";
-
 		std::cout << "10.  Test * BUBBLE SORT *\n";
-		std::cout << "11.  Test * INSERTION SORT *\n\n";
+		std::cout << "11.  Test * INSERTION SORT *\n";
 		std::cout << "12.  Test * SELECTION SORT *\n";
-		std::cout << "13.  Test * HEAP SORT *\n\n";
+		std::cout << "13.  Test * HEAP SORT *\n";
 		std::cout << "14.  Test * RADIX SORT *\n";
-		std::cout << "15.  Test * BUCKET SORT *\n\n";
+		std::cout << "15.  Test * BUCKET SORT *\n";
 		std::cout << "16.  Test * QUICK SORT *\n";
-		std::cout << "17.  Test * MERGE SORT *\n\n\n\n";
+		std::cout << "17.  Test * MERGE SORT *\n";
+		std::cout << "18.  Test * ADJACENCY MATRIX *\n";
 
 		std::cout << "0. ***** EXIT\n\n";
 
@@ -521,6 +518,16 @@ void main()
 			else
 				return;
 		case 17: Test_MergeSort();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 18: Test_AdjacencyMatrix();
 			std::cout << "\nDo you want to continue? *** Y/N \n";
 			cin >> _continue;
 			if (_continue == 'Y' || _continue == 'y')

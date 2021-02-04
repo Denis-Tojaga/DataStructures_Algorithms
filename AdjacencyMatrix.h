@@ -5,36 +5,50 @@
 #include "AdjacencyList.h";
 #include "LinkedList.h";
 #include "ListArray.h";
+#include"Edge.h";
 
 
 
 using namespace std;
 
 
-typedef T;
 class AdjacencyMatrix
 {
-	T** matrix;
+	int** matrix;
 	int _nodeCounter;
 	void AlocateMatrix()
 	{
-		matrix = new T[_nodeCounter];
+		matrix = new int*[_nodeCounter];
 		for (int i = 0; i < _nodeCounter; i++)
 		{
-			matrix[i] = new T[_nodeCounter];
+			matrix[i] = new int[_nodeCounter];
 			for (int j = 0; j < _nodeCounter; j++)
 				matrix[i][j] = 0;
 		}
 	}
 	void AlocateMatrix(ifstream& file)
 	{
-		matrix = new T[_nodeCounter];
+		matrix = new int*[_nodeCounter];
 		for (int i = 0; i < _nodeCounter; i++)
 		{
-			matrix[i] = new T[_nodeCounter];
+			matrix[i] = new int[_nodeCounter];
 			for (int j = 0; j < _nodeCounter; j++)
-				file >> matrix[i][j];
+				matrix[i][j] = 0;
 		}
+
+
+
+		for (int i = 0; i < _nodeCounter; i++)
+		{
+			for (int j = 0; j < _nodeCounter; j++)
+			{
+				int value;
+				file >> value;
+				matrix[i][j] = value;
+			}
+		}
+
+
 	}
 	void copy(const AdjacencyMatrix& obj)
 	{
@@ -80,7 +94,7 @@ public:
 		AlocateMatrix(inputFile);
 		inputFile.close();//after reading close the file
 	}
-	T& operator()(int a, int b)
+	int& operator()(int a, int b)
 	{
 		return matrix[a][b];
 	}
@@ -88,7 +102,7 @@ public:
 
 	void AddNode()
 	{
-		T** tempMatrix = matrix;
+		int** tempMatrix = matrix;
 		_nodeCounter++;
 		AlocateMatrix();
 		for (int i = 0; i < _nodeCounter-1; i++)
@@ -100,12 +114,12 @@ public:
 		delete[] tempMatrix;
 	}
 
-	void AddEdge(int i, int j, T weight)
+	void AddEdge(Edge<int>& edge)
 	{
-		matrix[i][j] = weight;
+		matrix[edge.GetStartNode()][edge.GetEndNode()] = edge.GetWeight();
 	}
 
-	T& GetEdgeWeight(int from,int to)
+	int& GetEdgeWeight(int from,int to)
 	{
 		return matrix[from][to];
 	}
@@ -114,7 +128,6 @@ public:
 	{
 		return matrix[from][to] > 0;
 	}
-
 
 	int FromNeigbourCounter(int row)
 	{
@@ -128,7 +141,6 @@ public:
 			sum += matrix[row][j];
 		return sum;
 	}
-
 	int ToNeigboursCounter(int column)
 	{
 		if (column<0 || column>_nodeCounter)
@@ -141,11 +153,10 @@ public:
 		return sum;
 	}
 
-
 	string printMatrix()const
 	{
 		cout << "*** Adjacency Matrix *** \n\n";
-		cout << " SIZE -> " << _size << endl;
+		cout << " Number of nodes -> " << _nodeCounter << endl;
 		stringstream ss;
 
 		for (int i = 0; i < _nodeCounter; i++)

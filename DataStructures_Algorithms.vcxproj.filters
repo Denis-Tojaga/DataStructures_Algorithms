@@ -120,4 +120,9 @@
       <Filter>Header Files\Graph</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica4.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
