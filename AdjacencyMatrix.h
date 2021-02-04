@@ -119,13 +119,25 @@ public:
 	int FromNeigbourCounter(int row)
 	{
 		if (row<0 || row>_nodeCounter)
-			throw exception("You've entered the wrong node!\n");
+			throw exception("You've entered the wrong row index!\n");
 
-		//To count neigbours from the certain node, we count by rows
+		//To count neigbours from the certain node, we count by columns
 
 		int sum = 0;
 		for (int j = 0; j < _nodeCounter; j++)
 			sum += matrix[row][j];
+		return sum;
+	}
+
+	int ToNeigboursCounter(int column)
+	{
+		if (column<0 || column>_nodeCounter)
+			throw exception("You've entered the wrong column index!\n");
+		//To count neigbours to the certain node, we count by rows
+
+		int sum = 0;
+		for (int i = 0; i < _nodeCounter; i++)
+			sum += matrix[i][column];
 		return sum;
 	}
 
