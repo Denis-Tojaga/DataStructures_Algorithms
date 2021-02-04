@@ -88,11 +88,23 @@ public:
 		if (matrix != nullptr)
 			Dealocate();
 
-		ifstream inputFile;
-		inputFile.open(fileName);
-		inputFile >> _nodeCounter;
-		AlocateMatrix(inputFile);
-		inputFile.close();//after reading close the file
+		ifstream fin(fileName);
+
+		fin >> _nodeCounter;
+
+		matrix = new int* [_nodeCounter];
+		for (int i = 0; i < _nodeCounter; i++)
+		{
+			matrix[i] = new int[_nodeCounter];
+			for (int j = 0; j < _nodeCounter; j++)
+			{
+				int value;
+				fin >> value;
+				matrix[i][j] = value;
+			}
+		}
+
+		fin.close();
 	}
 	int& operator()(int a, int b)
 	{
