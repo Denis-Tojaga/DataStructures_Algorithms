@@ -19,6 +19,7 @@
 #include "HeapSort.h";
 #include "QuickSort.h";
 #include "MergeSort.h";
+#include "AdjacencyMatrix.h";
 using namespace std;
 
 /// <summary>
@@ -299,6 +300,15 @@ void Test_MergeSort()
 
 
 
+void Test_AdjacencyMatrix()
+{
+	AdjacencyMatrix matrix(4);
+	matrix.LoadFromFile("Matrica4.txt");
+	matrix.printMatrix();
+
+
+
+}
 
 
 

@@ -116,6 +116,20 @@ public:
 	}
 
 
+	int FromNeigbourCounter(int row)
+	{
+		if (row<0 || row>_nodeCounter)
+			throw exception("You've entered the wrong node!\n");
+
+		//To count neigbours from the certain node, we count by rows
+
+		int sum = 0;
+		for (int j = 0; j < _nodeCounter; j++)
+			sum += matrix[row][j];
+		return sum;
+	}
+
+
 	string printMatrix()const
 	{
 		cout << "*** Adjacency Matrix *** \n\n";
