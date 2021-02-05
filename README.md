@@ -18,6 +18,4 @@
 ### * [Linked Queue](./QueueLinked.h)
 
 
-### * Sequentional queue
-### * Linked queue
 
