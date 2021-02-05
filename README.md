@@ -11,7 +11,6 @@
 ### * [Sequentional Stack](./StackArray.h)
 ### * [Linked Stack](./StackLinked.h)
 
-<br>
 
 ## Queue
 ### * [Sequentional Queue](./QueueArray.h)
