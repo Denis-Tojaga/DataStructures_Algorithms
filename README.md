@@ -14,8 +14,8 @@
 <br>
 
 ## Queue
-### * [Sequentional Stack](./StackArray.h)
-### * [Linked Stack](./StackLinked.h)
+### * [Sequentional Queue](./StackArray.h)
+### * [Linked Queue](./StackLinked.h)
 
 
 ### * Sequentional queue
