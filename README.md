@@ -13,7 +13,11 @@
 
 <br>
 
-### * Linked stack
+## Queue
+### * [Sequentional Stack](./StackArray.h)
+### * [Linked Stack](./StackLinked.h)
+
+
 ### * Sequentional queue
 ### * Linked queue
 
