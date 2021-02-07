@@ -83,12 +83,18 @@ public:
 		return *this;
 	}
 
-	void LoadFromFile(string fileName)
+	bool LoadFromFile(string fileName)
 	{
 		if (matrix != nullptr)
 			Dealocate();
 
 		ifstream fin(fileName);
+
+		if (!fin)
+		{
+			cout << "Cannot open the file!\n";
+			return false;
+		}
 
 		fin >> _nodeCounter;
 
@@ -98,13 +104,12 @@ public:
 			matrix[i] = new int[_nodeCounter];
 			for (int j = 0; j < _nodeCounter; j++)
 			{
-				int value;
-				fin >> value;
-				matrix[i][j] = value;
+				fin >> matrix[i][j];
 			}
 		}
 
 		fin.close();
+		return true;
 	}
 	int& operator()(int a, int b)
 	{

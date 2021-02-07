@@ -303,13 +303,20 @@ void Test_MergeSort()
 void Test_AdjacencyMatrix()
 {
 	AdjacencyMatrix matrix(4);
-	matrix.LoadFromFile("Matrica4.txt");
-	matrix.printMatrix();
-
-	cout << "\n\nNumber of neigbours from the node  0 is -> " << matrix.FromNeigbourCounter(0) << endl;
-	cout << "\n\nNumber of neigbours to the node  0 is -> " << matrix.ToNeigboursCounter(0) << endl;
-
-	cout << endl;
+	try
+	{
+		if (matrix.LoadFromFile("Matrica4.txt"))
+		{
+			matrix.printMatrix();
+			cout << "\n\nNumber of neigbours from the node  0 is -> " << matrix.FromNeigbourCounter(0) << endl;
+			cout << "\n\nNumber of neigbours to the node  0 is -> " << matrix.ToNeigboursCounter(0) << endl;
+			cout << endl;
+		}
+	}
+	catch (const std::exception& ex)
+	{
+		cout << "\n " << ex.what() << endl;
+	}
 }
 
 
