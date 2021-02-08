@@ -299,10 +299,12 @@ void Test_MergeSort()
 
 
 
-
+/// <summary>
+/// Test Adjacency Matrix
+/// </summary>
 void Test_AdjacencyMatrix()
 {
-	AdjacencyMatrix matrix(4);
+	AdjacencyMatrix matrix;
 	try
 	{
 		if (matrix.LoadFromFile("Matrica4.txt"))

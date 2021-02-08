@@ -37,6 +37,9 @@
     <Filter Include="Header Files\Graph">
       <UniqueIdentifier>{2fd1a9ba-ee07-4b53-b197-526ca5933dec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\BinarySearchTree">
+      <UniqueIdentifier>{14207de5-82ea-4a3d-8079-3d32e3674c36}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
