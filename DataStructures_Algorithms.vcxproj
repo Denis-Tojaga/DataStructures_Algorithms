@@ -146,6 +146,7 @@
     <ClInclude Include="AdjacencyMatrix.h" />
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="BSNode.h" />
+    <ClInclude Include="BSTraverse.h" />
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="BucketSort.h" />
     <ClInclude Include="Edge.h" />

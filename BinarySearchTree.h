@@ -38,7 +38,6 @@ class BinarySearchTree
 			return Recursion_SearchFor(node->rightChild, value);
 	}
 
-
 	//Adds a new node to a tree with recursion
 	bool Recursion_AddNode(BSNode<Key>* node, Key value)
 	{
@@ -57,11 +56,6 @@ class BinarySearchTree
 			return Recursion_AddNode(node->rightChild, value);
 	}
 
-
-
-
-
-
 public:
 	BinarySearchTree() : _root(nullptr) {}
 
@@ -73,15 +67,20 @@ public:
 		return Recursion_AddNode(_root, value);
 	}
 
-
 	void Dealocate()
 	{
 		Recursion_DealocateTree(_root);
 	}
 
+	//Searches for the given Key value in the tree
 	BSNode<Key>* Search(Key value)
 	{
-
+		return Recursion_SearchFor(_root, value);
 	}
 
+	bool Contains(Key value)
+	{
+		//Checks if tree contains the given value
+		return Search(value) != nullptr;
+	}
 };
