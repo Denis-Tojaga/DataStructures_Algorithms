@@ -13,5 +13,4 @@ public:
 		leftChild = nullptr;
 		rightChild = nullptr;
 	}
-
 };
