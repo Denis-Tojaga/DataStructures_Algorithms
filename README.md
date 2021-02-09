@@ -19,7 +19,7 @@
 
 ## Priority Queue
 #### * [Sequentional Priority Queue](./PriorityQueueArray.h)
-#### * [Linked Priority Queue](./PriorityQueueLinked.h)
+#### * [Linked Priority Queue](./PrirorityQueueLinked.h)
 
 
 
