@@ -72,6 +72,68 @@ public:
 
 #pragma endregion
 
+#pragma region Iterative Traversing
+
+	static List<Key>* PreOrder_Iterative(BinarySearchTree<Key>& tree)
+	{
+		List<Key>* list = new List<Key>;
+		StackLinked<BSNode<Key>*> stack;
+
+		stack.Add_To_Stack(tree._root);
+
+		while (!stack.IsEmpty())
+		{
+			//remove the node from the stack 
+			BSNode<Key>* removedNode = stack.Remove_From_Stack();
+
+			//add it to the list of visited nodes
+			list->Add_On_End(removedNode);
+
+			//if node had left or right child we add that to stack and repeat procedure
+			if (removedNode->rightChild != nullptr)
+				stack.Add_To_Stack(removedNode->rightChild);
+			
+			if (removedNode->leftChild != nullptr)
+				stack.Add_To_Stack(removedNode->leftChild);
+		}
+
+		return list;
+	}
+	static List<Key>* PostOrder_Iterative(BinarySearchTree& tree)
+	{
+		List<Key>* list = new List<Key>; //list of visited nodes
+		Stack<Key>* result = new StackLinked<Key>;//result stack for all visited nodes
+
+		StackLinked<BSNode<Key>*> stack;
+
+		stack.Add_To_Stack(tree._root);
+
+		while (!stack.IsEmpty())
+		{
+			BSNode<Key>* removedNode = stack.Remove_From_Stack();
+			if (removedNode != nullptr)
+			{
+				result->Add_To_Stack(removedNode->value);
+				stack.Add_To_Stack(removedNode->leftChild);
+				stack.Add_To_Stack(removedNode->rightChild);
+			}
+		}
+
+
+		//we empty the result stack and add those elements to the list 
+		while (!result->IsEmpty())
+			list->Add_On_End(result->Remove_From_Stack());
+
+		return list;
+	}
+	static List<Key>* InOrder_Iterative(BinarySearchTree& tree)
+	{
+
+	}
+
+
+
+#pragma endregion
 
 
 	//Three itertive methods
