@@ -2,13 +2,13 @@
 #include "BinarySearchTree.h";
 #include "LinkedList.h";
 #include "StackLinked.h";
+#include "QueueLinked.h";
 
 
 
 template<class Key>
 class BSTraverse
 {
-
 #pragma region Recursion Traversing
 
 	//PostOrder traversing (left child, right child, value comes last)
@@ -45,8 +45,6 @@ class BSTraverse
 	}
 
 #pragma endregion
-
-
 public:
 
 #pragma region Recursion Traverse
@@ -128,18 +126,60 @@ public:
 	}
 	static List<Key>* InOrder_Iterative(BinarySearchTree& tree)
 	{
+		List<Key>* list = new LinkedList<Key>;
 
+		/// Pointer which will move from node to node
+		BSNode<Key>* currentNode = tree._root;
+
+		StackLinked<BSNode<Key>*> stack;
+
+		while (true)
+		{
+			if (currentNode != nullptr)
+			{
+				stack.Add_To_Stack(currentNode);
+				currentNode = currentNode->leftChild;
+			}
+			else 
+			{
+				if (stack.IsEmpty())
+					break;
+
+				currentNode = stack.Remove_From_Stack();
+				list->Add_On_End(currentNode->value);
+				currentNode = currentNode->rightChild;
+			}
+		}
+		return list;
 	}
-
-
 
 #pragma endregion
 
+#pragma region Level by level Iterative
+	static List<Key>* LevelByLevel_iterative(BinarySearchTree& tree)
+	{
+		List<Key>* list = new LinkedList<Key>;
 
-	//Three itertive methods
+		//In level by level traversing we are using queue
+		LinkedQueue<BSNode<Key>*> queue;
 
+		while (!queue.IsEmpty())
+		{
+			BSNode<Key>* removedNode = queue.Remove_From_Queue();
 
-	//level by level iterative
+			list->Add_On_End(removedNode->value);
 
+			//in this case we first add left then right child(because we are using queue)
+			if (removedNode->leftChild != nullptr)
+				queue.Add_To_Queue(removedNode->leftChild);
+
+			if (removedNode->rightChild != nullptr)
+				queue.Add_To_Queue(removedNode->rightChild);
+		}
+		return list;
+	}
+#pragma endregion
+
+	//implement test header
 
 };
