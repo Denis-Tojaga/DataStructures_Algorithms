@@ -49,7 +49,29 @@ class BSTraverse
 
 public:
 
-	//Three recursions
+#pragma region Recursion Traverse
+
+	static List<Key>* PostOrder_Recursion(BinarySearchTree<Key>& tree)
+	{
+		List<Key>* list = new List<Key>;
+		Recursion_PostOrder(tree._root, list);
+		return list;
+	}
+	static List<Key>* PreOrder_Recursion(BinarySearchTree<Key>& tree)
+	{
+		List<Key>* list = new List<Key>;
+		Recursion_PreOrder(tree._root, list);
+		return list;
+	}
+	static List<Key>* InOrder_Recursion(BinarySearchTree<Key>& tree)
+	{
+		List<Key>* list = new List<Key>;
+		Recursion_InOrder(tree._root, list);
+		return list;
+	}
+
+#pragma endregion
+
 
 
 	//Three itertive methods
