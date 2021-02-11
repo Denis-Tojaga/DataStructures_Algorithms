@@ -120,7 +120,7 @@ public:
 
 		//we empty the result stack and add those elements to the list 
 		while (!result->IsEmpty())
-			list->Add_On_End(result->Remove_From_Stack());
+			list->Add_On_Start(result->Remove_From_Stack());
 
 		return list;
 	}
@@ -146,7 +146,7 @@ public:
 					break;
 
 				currentNode = stack.Remove_From_Stack();
-				list->Add_On_End(currentNode->value);
+				list->Add_On_Start(currentNode->value);
 				currentNode = currentNode->rightChild;
 			}
 		}
@@ -163,11 +163,13 @@ public:
 		//In level by level traversing we are using queue
 		LinkedQueue<BSNode<Key>*> queue;
 
+		queue.Add_To_Queue(tree._root);
+
 		while (!queue.IsEmpty())
 		{
 			BSNode<Key>* removedNode = queue.Remove_From_Queue();
 
-			list->Add_On_End(removedNode->value);
+			list->Add_On_Start(removedNode->value);
 
 			//in this case we first add left then right child(because we are using queue)
 			if (removedNode->leftChild != nullptr)

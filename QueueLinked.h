@@ -24,13 +24,17 @@ public:
 		//if _end has something that it's pointing then that Node has to point to a newNode 
 		//because newNode has to be the last one
 		//if _end doesn't point to anything that means the queue is empty and _start has to point to newNode
-		if (_end != nullptr)
-			_end->_nextNode = newNode;
-		else
-			_start = newNode;
 
-		//after reorganization of the last node, now _end has to point to the last node (newNode) no matter what
-		_end = newNode;
+		if (!IsEmpty())
+		{
+			_end->_nextNode = newNode;
+			_end = newNode;
+		}
+		else
+		{
+			_end = newNode;
+			_start = newNode;
+		}
 		cout << "\nNew node added to Linked Queue with value -> | " << _end->value << " |\n";
 		_counter++;
 	}
@@ -46,7 +50,6 @@ public:
 		_counter--;
 		return deletedNode;
 	}
-
 
 
 	void Print()
