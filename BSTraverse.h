@@ -180,6 +180,4 @@ public:
 	}
 #pragma endregion
 
-	//implement test header
-
 };

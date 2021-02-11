@@ -131,6 +131,9 @@
     <ClInclude Include="BSTraverse.h">
       <Filter>Header Files\BinarySearchTree</Filter>
     </ClInclude>
+    <ClInclude Include="TestBSTree.h">
+      <Filter>Header Files\BinarySearchTree</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica4.txt">

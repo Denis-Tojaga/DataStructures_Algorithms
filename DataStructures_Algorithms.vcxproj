@@ -170,6 +170,7 @@
     <ClInclude Include="StackArray.h" />
     <ClInclude Include="StackBase.h" />
     <ClInclude Include="StackLinked.h" />
+    <ClInclude Include="TestBSTree.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica4.txt" />
