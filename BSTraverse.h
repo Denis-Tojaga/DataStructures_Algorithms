@@ -51,7 +51,7 @@ public:
 
 	static List<Key>* PostOrder_Recursion(BinarySearchTree<Key>& tree)
 	{
-		List<Key>* list = new List<Key>;
+		List<Key>* list = new LinkedList<Key>;
 		Recursion_PostOrder(tree._root, list);
 		return list;
 	}
@@ -63,7 +63,7 @@ public:
 	}
 	static List<Key>* InOrder_Recursion(BinarySearchTree<Key>& tree)
 	{
-		List<Key>* list = new List<Key>;
+		List<Key>* list = new LinkedList<Key>;
 		Recursion_InOrder(tree._root, list);
 		return list;
 	}
@@ -99,7 +99,7 @@ public:
 	}
 	static List<Key>* PostOrder_Iterative(BinarySearchTree<Key>& tree)
 	{
-		List<Key>* list = new List<Key>; //list of visited nodes
+		List<Key>* list = new LinkedList<Key>; //list of visited nodes
 		Stack<Key>* result = new StackLinked<Key>;//result stack for all visited nodes
 
 		StackLinked<BSNode<Key>*> stack;
