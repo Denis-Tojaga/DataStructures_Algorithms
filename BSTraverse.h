@@ -18,7 +18,7 @@ class BSTraverse
 		{
 			Recursion_PostOrder(node->leftChild, listOfNodes);
 			Recursion_PostOrder(node->rightChild, listOfNodes);
-			listOfNodes->Add_On_End(node->value);
+			listOfNodes->Add_On_Start(node->value);
 		}
 	}
 
@@ -28,7 +28,7 @@ class BSTraverse
 		if (node != nullptr)
 		{
 			Recursion_InOrder(node->leftChild, listOfNodes);
-			listOfNodes->Add_On_End(node->value);
+			listOfNodes->Add_On_Start(node->value);
 			Recursion_InOrder(node->rightChild, listOfNodes);
 		}
 	}
@@ -38,7 +38,7 @@ class BSTraverse
 	{
 		if (node != nullptr)
 		{
-			listOfNodes->Add_On_End(node->value);
+			listOfNodes->Add_On_Start(node->value);
 			Recursion_PreOrder(node->leftChild, listOfNodes);
 			Recursion_PreOrder(node->rightChild, listOfNodes);
 		}
@@ -57,7 +57,7 @@ public:
 	}
 	static List<Key>* PreOrder_Recursion(BinarySearchTree<Key>& tree)
 	{
-		List<Key>* list = new List<Key>;
+		List<Key>* list = new LinkedList<Key>;
 		Recursion_PreOrder(tree._root, list);
 		return list;
 	}
@@ -97,7 +97,7 @@ public:
 
 		return list;
 	}
-	static List<Key>* PostOrder_Iterative(BinarySearchTree& tree)
+	static List<Key>* PostOrder_Iterative(BinarySearchTree<Key>& tree)
 	{
 		List<Key>* list = new List<Key>; //list of visited nodes
 		Stack<Key>* result = new StackLinked<Key>;//result stack for all visited nodes
@@ -124,7 +124,7 @@ public:
 
 		return list;
 	}
-	static List<Key>* InOrder_Iterative(BinarySearchTree& tree)
+	static List<Key>* InOrder_Iterative(BinarySearchTree<Key>& tree)
 	{
 		List<Key>* list = new LinkedList<Key>;
 
@@ -156,7 +156,7 @@ public:
 #pragma endregion
 
 #pragma region Level by level Iterative
-	static List<Key>* LevelByLevel_iterative(BinarySearchTree& tree)
+	static List<Key>* LevelByLevel_iterative(BinarySearchTree<Key>& tree)
 	{
 		List<Key>* list = new LinkedList<Key>;
 

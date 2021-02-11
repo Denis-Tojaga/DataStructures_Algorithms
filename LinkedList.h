@@ -9,6 +9,7 @@ class LinkedList : public List<T>
 	int _counter = 0;
 	void ShowException() { throw std::exception("*** The linked list is empty!***\n"); }
 public:
+	LinkedList() : _first(nullptr), _counter(0) {}
 	T Remove_By_Index(int index) { return 0; }
 	T Remove_By_Key(T value)
 	{

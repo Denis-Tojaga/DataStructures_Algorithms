@@ -8,7 +8,6 @@ using namespace std;
 template<class Key>
 class BinarySearchTree
 {
-	BSNode<Key>* _root;
 
 	bool IsEqual(Key& firstValue, Key& secondValue) { return firstValue == secondValue; }
 	bool IsLarger(Key& firstValue, Key& secondValue){return firstValue > secondValue;}
@@ -39,7 +38,7 @@ class BinarySearchTree
 	}
 
 	//Adds a new node to a tree with recursion
-	bool Recursion_AddNode(BSNode<Key>* node, Key value)
+	bool Recursion_AddNode(BSNode<Key>*& node, Key value)
 	{
 		if (node == nullptr)
 		{
@@ -57,6 +56,7 @@ class BinarySearchTree
 	}
 
 public:
+	BSNode<Key>* _root;
 	BinarySearchTree() : _root(nullptr) {}
 
 	bool Add(Key value)

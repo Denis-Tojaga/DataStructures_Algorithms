@@ -20,6 +20,7 @@
 #include "QuickSort.h";
 #include "MergeSort.h";
 #include "AdjacencyMatrix.h";
+#include "TestBSTree.h";
 using namespace std;
 
 /// <summary>
@@ -323,6 +324,15 @@ void Test_AdjacencyMatrix()
 
 
 
+/// <summary>
+/// Test BinarySearchTree
+/// </summary>
+void Test_BinarySearchTree()
+{
+	TestBSTree();
+}
+
+
 
 
 
@@ -351,6 +361,7 @@ void main()
 		std::cout << "16.  Test * QUICK SORT *\n";
 		std::cout << "17.  Test * MERGE SORT *\n";
 		std::cout << "18.  Test * ADJACENCY MATRIX *\n";
+		std::cout << "19.  Test * BINARY SEARCH TREE *\n";
 
 		std::cout << "0. ***** EXIT\n\n";
 
@@ -537,6 +548,16 @@ void main()
 			else
 				return;
 		case 18: Test_AdjacencyMatrix();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 19: Test_BinarySearchTree();
 			std::cout << "\nDo you want to continue? *** Y/N \n";
 			cin >> _continue;
 			if (_continue == 'Y' || _continue == 'y')
