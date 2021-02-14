@@ -22,6 +22,11 @@ class ListArray : public List<T>
 	}
 	void ShowException() { throw std::exception("The list is empty!\n"); }
 public:
+	ListArray(int max = 10)
+	{
+		this->max_size = max;
+	}
+
 	bool IsFull() { return _counter == max_size; }
 	bool IsEmpty() { return _counter == 0; }
 
