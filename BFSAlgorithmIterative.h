@@ -62,8 +62,9 @@ class BFSAlgorithmIterative
 
 public:
 
-
-
-
+	static List<int>* start(AdjacencyMatrix* matrix, int startValue = 0)
+	{
+		return BFSAlgorithmIterative(matrix, startValue)._start();
+	}
 
 };
