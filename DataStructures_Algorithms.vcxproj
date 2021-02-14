@@ -144,11 +144,13 @@
   <ItemGroup>
     <ClInclude Include="AdjacencyList.h" />
     <ClInclude Include="AdjacencyMatrix.h" />
+    <ClInclude Include="BFSAlgorithmIterative.h" />
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="BSNode.h" />
     <ClInclude Include="BSTraverse.h" />
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="BucketSort.h" />
+    <ClInclude Include="DFSAlgorithmIterative.h" />
     <ClInclude Include="Edge.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="HeapBase.h" />

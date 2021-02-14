@@ -40,6 +40,9 @@
     <Filter Include="Header Files\BinarySearchTree">
       <UniqueIdentifier>{14207de5-82ea-4a3d-8079-3d32e3674c36}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\BFS_DFS">
+      <UniqueIdentifier>{ad626a9b-9fd3-4be9-93b6-54921e12bfd6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -133,6 +136,12 @@
     </ClInclude>
     <ClInclude Include="TestBSTree.h">
       <Filter>Header Files\BinarySearchTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BFSAlgorithmIterative.h">
+      <Filter>Header Files\BFS_DFS</Filter>
+    </ClInclude>
+    <ClInclude Include="DFSAlgorithmIterative.h">
+      <Filter>Header Files\BFS_DFS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
