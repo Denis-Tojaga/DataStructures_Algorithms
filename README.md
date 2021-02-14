@@ -20,6 +20,18 @@
 ## Priority Queue
 #### * [Sequentional Priority Queue](./PriorityQueueArray.h)
 #### * [Linked Priority Queue](./PrirorityQueueLinked.h)
+<br>
+
+# Algorithms
+#### * [Bubble sort](./BubbleSort.h)
+#### * [Insertion sort](./InsertionSort.h)
+#### * [Selection sort](./SelectionSort.h)
+#### * [Radix sort](./RadixSort.h)
+#### * [Bucket sort](./BucketSort.h)
+#### * [Quick sort](./QuickSort.h)
+#### * [Merge sort](./MergeSort.h)
+
+
 
 
 
