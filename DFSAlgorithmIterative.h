@@ -21,7 +21,6 @@ class DFSAlgorithmIterative
 		//private constructor does not allow instatiating the object of this class 
 	}
 
-
 	List<int>* _start()
 	{
 		List<int>* visitedNodes = new ListArray<int>(_matrix->GetCounter());
@@ -48,11 +47,17 @@ class DFSAlgorithmIterative
 			}
 		}
 
-
 		return visitedNodes;
-
 	}
 public:
 
+	static List<int>* start(AdjacencyMatrix* matrix, int start = 0)
+	{
+		return DFSAlgorithmIterative(matrix, start)._start();
+	}
+
+
+	//implement DFS recursion
+	//test methods
 
 };
