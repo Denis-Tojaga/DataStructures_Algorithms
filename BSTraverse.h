@@ -109,9 +109,11 @@ public:
 		while (!stack.IsEmpty())
 		{
 			BSNode<Key>* removedNode = stack.Remove_From_Stack();
+
 			if (removedNode != nullptr)
 			{
-				result->Add_To_Stack(removedNode->value);
+				result->Add_To_Stack(removedNode->value);//we add keys here because result is a stack of Keys
+
 				stack.Add_To_Stack(removedNode->leftChild);
 				stack.Add_To_Stack(removedNode->rightChild);
 			}
@@ -120,7 +122,7 @@ public:
 
 		//we empty the result stack and add those elements to the list 
 		while (!result->IsEmpty())
-			list->Add_On_Start(result->Remove_From_Stack());
+			list->Add_On_End(result->Remove_From_Stack());
 
 		return list;
 	}
@@ -146,7 +148,7 @@ public:
 					break;
 
 				currentNode = stack.Remove_From_Stack();
-				list->Add_On_Start(currentNode->value);
+				list->Add_On_End(currentNode->value);
 				currentNode = currentNode->rightChild;
 			}
 		}
@@ -169,7 +171,7 @@ public:
 		{
 			BSNode<Key>* removedNode = queue.Remove_From_Queue();
 
-			list->Add_On_Start(removedNode->value);
+			list->Add_On_End(removedNode->value);
 
 			//in this case we first add left then right child(because we are using queue)
 			if (removedNode->leftChild != nullptr)
