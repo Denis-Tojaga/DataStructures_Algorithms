@@ -151,8 +151,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica9.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
     <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica4.txt">
-      <Filter>Header Files\Graph</Filter>
+      <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

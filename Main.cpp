@@ -21,6 +21,7 @@
 #include "MergeSort.h";
 #include "AdjacencyMatrix.h";
 #include "TestBSTree.h";
+#include "Test_DFS_BFS.h";
 using namespace std;
 
 /// <summary>
@@ -308,13 +309,11 @@ void Test_AdjacencyMatrix()
 	AdjacencyMatrix matrix;
 	try
 	{
-		if (matrix.LoadFromFile("Matrica4.txt"))
-		{
-			matrix.printMatrix();
-			cout << "\n\nNumber of neigbours from the node  0 is -> " << matrix.FromNeigbourCounter(0) << endl;
-			cout << "\n\nNumber of neigbours to the node  0 is -> " << matrix.ToNeigboursCounter(0) << endl;
-			cout << endl;
-		}
+		matrix.LoadFromFile("Matrica4.txt");
+		matrix.printMatrix();
+		cout << "\n\nNumber of neigbours from the node  0 is -> " << matrix.FromNeigbourCounter(0) << endl;
+		cout << "\n\nNumber of neigbours to the node  0 is -> " << matrix.ToNeigboursCounter(0) << endl;
+		cout << endl;
 	}
 	catch (const std::exception& ex)
 	{
@@ -333,6 +332,13 @@ void Test_BinarySearchTree()
 }
 
 
+/// <summary>
+/// Test BFS and DFS
+/// </summary>
+void Test_BFS_DFS_()
+{
+	Test_BFS_DFS();
+}
 
 
 
@@ -362,6 +368,7 @@ void main()
 		std::cout << "17.  Test * MERGE SORT *\n";
 		std::cout << "18.  Test * ADJACENCY MATRIX *\n";
 		std::cout << "19.  Test * BINARY SEARCH TREE *\n";
+		std::cout << "20.  Test * BFS / DFS *\n";
 
 		std::cout << "0. ***** EXIT\n\n";
 
@@ -558,6 +565,16 @@ void main()
 			else
 				return;
 		case 19: Test_BinarySearchTree();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 20: Test_BFS_DFS_();
 			std::cout << "\nDo you want to continue? *** Y/N \n";
 			cin >> _continue;
 			if (_continue == 'Y' || _continue == 'y')

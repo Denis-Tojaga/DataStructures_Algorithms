@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica4.txt" />
+    <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica9.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

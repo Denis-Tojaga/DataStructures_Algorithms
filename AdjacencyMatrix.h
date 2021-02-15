@@ -26,30 +26,8 @@ class AdjacencyMatrix
 				matrix[i][j] = 0;
 		}
 	}
-	void AlocateMatrix(ifstream& file)
-	{
-		matrix = new int*[_nodeCounter];
-		for (int i = 0; i < _nodeCounter; i++)
-		{
-			matrix[i] = new int[_nodeCounter];
-			for (int j = 0; j < _nodeCounter; j++)
-				matrix[i][j] = 0;
-		}
 
 
-
-		for (int i = 0; i < _nodeCounter; i++)
-		{
-			for (int j = 0; j < _nodeCounter; j++)
-			{
-				int value;
-				file >> value;
-				matrix[i][j] = value;
-			}
-		}
-
-
-	}
 	void copy(const AdjacencyMatrix& obj)
 	{
 		_nodeCounter = obj._nodeCounter;
@@ -83,34 +61,24 @@ public:
 		return *this;
 	}
 
-	bool LoadFromFile(string fileName)
+	void LoadFromFile(string fileName)
 	{
-		if (matrix != nullptr)
-			Dealocate();
-
 		ifstream fin(fileName);
 
-		if (!fin)
-		{
-			cout << "Cannot open the file!\n";
-			return false;
-		}
+		int value = 0;
 
-		fin >> _nodeCounter;
-
-		matrix = new int* [_nodeCounter];
 		for (int i = 0; i < _nodeCounter; i++)
 		{
-			matrix[i] = new int[_nodeCounter];
 			for (int j = 0; j < _nodeCounter; j++)
 			{
-				fin >> matrix[i][j];
+				fin >> value;
+				matrix[i][j] = value;
 			}
 		}
 
 		fin.close();
-		return true;
 	}
+
 	int& operator()(int a, int b)
 	{
 		return matrix[a][b];
