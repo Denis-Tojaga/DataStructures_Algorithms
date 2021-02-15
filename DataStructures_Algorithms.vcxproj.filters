@@ -143,6 +143,9 @@
     <ClInclude Include="DFSAlgorithmIterative.h">
       <Filter>Header Files\BFS_DFS</Filter>
     </ClInclude>
+    <ClInclude Include="DFSAlgorithmRecursion.h">
+      <Filter>Header Files\BFS_DFS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica4.txt">
