@@ -155,6 +155,9 @@
     <ClInclude Include="DijkstraAlgorithm.h" />
     <ClInclude Include="DijkstraTest.h" />
     <ClInclude Include="Edge.h" />
+    <ClInclude Include="Hashing.h" />
+    <ClInclude Include="HashingChaining.h" />
+    <ClInclude Include="HashingOpenAdressing.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="HeapBase.h" />
     <ClInclude Include="HeapSort.h" />

@@ -46,6 +46,9 @@
     <Filter Include="Header Files\Dijkstra">
       <UniqueIdentifier>{cbf4c19a-9270-443f-bcf9-59389555b0ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Hashing">
+      <UniqueIdentifier>{12fd4c8a-f4b6-46f8-ad7b-3576640b0364}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -157,6 +160,15 @@
     </ClInclude>
     <ClInclude Include="DijkstraTest.h">
       <Filter>Header Files\Dijkstra</Filter>
+    </ClInclude>
+    <ClInclude Include="Hashing.h">
+      <Filter>Header Files\Hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="HashingOpenAdressing.h">
+      <Filter>Header Files\Hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="HashingChaining.h">
+      <Filter>Header Files\Hashing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
