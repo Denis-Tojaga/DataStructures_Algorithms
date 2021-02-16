@@ -16,8 +16,8 @@ class DijkstraAlgorithm
 
 	int _startValue;
 	int _endValue;
-	
-	DijkstraAlgorithm(AdjacencyMatrix* matrix,int start,int end)
+
+	DijkstraAlgorithm(AdjacencyMatrix* matrix, int start, int end)
 	{
 		_matrix = matrix;
 
@@ -44,8 +44,6 @@ class DijkstraAlgorithm
 			}
 		return minValue;
 	}
-
-
 	ListArray<Edge<int>*>* _start()
 	{
 		cout << "Start value -> " << _startValue << " ----- end value -> " << _endValue << endl;
@@ -95,8 +93,27 @@ class DijkstraAlgorithm
 			}
 		}
 		//-----------------------------------------
-		
+
+
+
+		int pathValue = 0;
+		int value = _endValue;
+
+		while (value != _startValue)
+		{
+			int previousValue = _previous[value];
+			int weight = _matrix->GetEdgeWeight(previousValue, value);
+			result->Add_On_End(new Edge<int>(previousValue, value, weight));
+
+			pathValue += weight;
+			value = previousValue;
+		}
+
+
+		cout << "The whole path's value is -> " << pathValue << "\n";
+		return result;
 	}
+public:
 
 
 };
