@@ -22,6 +22,7 @@
 #include "AdjacencyMatrix.h";
 #include "TestBSTree.h";
 #include "Test_DFS_BFS.h";
+#include "DijkstraTest.h";
 using namespace std;
 
 /// <summary>
@@ -306,13 +307,13 @@ void Test_MergeSort()
 /// </summary>
 void Test_AdjacencyMatrix()
 {
-	AdjacencyMatrix matrix;
+	AdjacencyMatrix* matrix = new AdjacencyMatrix(4);
 	try
 	{
-		matrix.LoadFromFile("Matrica4.txt");
-		matrix.printMatrix();
-		cout << "\n\nNumber of neigbours from the node  0 is -> " << matrix.FromNeigbourCounter(0) << endl;
-		cout << "\n\nNumber of neigbours to the node  0 is -> " << matrix.ToNeigboursCounter(0) << endl;
+		matrix->LoadFromFile("Matrica4.txt");
+		matrix->printMatrix();
+		cout << "\n\nNumber of neigbours from the node  0 is -> " << matrix->FromNeigbourCounter(0) << endl;
+		cout << "\n\nNumber of neigbours to the node  0 is -> " << matrix->ToNeigboursCounter(0) << endl;
 		cout << endl;
 	}
 	catch (const std::exception& ex)
@@ -338,6 +339,15 @@ void Test_BinarySearchTree()
 void Test_BFS_DFS_()
 {
 	Test_BFS_DFS();
+}
+
+
+/// <summary>
+/// Test Dijkstra Algorithm
+/// </summary>
+void Test_Dijkstra()
+{
+	Test();
 }
 
 
@@ -369,8 +379,9 @@ void main()
 		std::cout << "18.  Test * ADJACENCY MATRIX *\n";
 		std::cout << "19.  Test * BINARY SEARCH TREE *\n";
 		std::cout << "20.  Test * BFS / DFS *\n";
+		std::cout << "21.  Test * DIJKSTRA *\n";
 
-		std::cout << "0. ***** EXIT\n\n";
+		std::cout << "\n0. ***** EXIT\n\n";
 
 
 		std::cout << "*** Please enter number to test methods *** \n";
@@ -575,6 +586,16 @@ void main()
 			else
 				return;
 		case 20: Test_BFS_DFS_();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 21: Test_Dijkstra();
 			std::cout << "\nDo you want to continue? *** Y/N \n";
 			cin >> _continue;
 			if (_continue == 'Y' || _continue == 'y')

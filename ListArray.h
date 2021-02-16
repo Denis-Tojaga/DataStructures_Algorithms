@@ -90,11 +90,11 @@ public:
 
 	T Remove_By_Index(int index)
 	{
-		if (index<0 || index>_counter)
+		/*if (index<0 || index>_counter)
 		{
 			cout << "Cannot remove element, index is not valid!\n";
-			return -1;
-		}
+			return index;
+		}*/
 
 		T removedValue = _arr[index];
 
@@ -107,15 +107,15 @@ public:
 
 	T Remove_By_Key(T value)
 	{
-		int valueIndex = -1;
+		/*int valueIndex = INT_MIN;
 		for (int i = 0; i < _counter; i++)
 			if (_arr[i] == value)
 				valueIndex = i;
 
-		if (valueIndex != -1)
+		if (valueIndex != INT_MIN)
 			return Remove_By_Index(valueIndex);
-		else
-			return -1;
+		return valueIndex;*/
+		return value;
 	}
 
 	bool Search_By_Key(T value)

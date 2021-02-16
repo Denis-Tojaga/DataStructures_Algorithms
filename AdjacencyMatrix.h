@@ -69,18 +69,17 @@ public:
 
 	void LoadFromFile(string fileName)
 	{
-		ifstream fin(fileName);
-
+		ifstream inFile(fileName,ios::in);
 
 		for (int i = 0; i < _nodeCounter; i++)
 			for (int j = 0; j < _nodeCounter; j++)
 			{
 				int value;
-				fin >> value;
+				inFile >> value;
 				matrix[i][j] = value;
 			}
 
-		fin.close();
+		inFile.close();
 	}
 
 	int& operator()(int a, int b)
@@ -114,7 +113,7 @@ public:
 		delete[] tempMatrix;
 	}
 
-	void AddEdge(Edge<int>& edge)
+	void AddEdge(Edge& edge)
 	{
 		matrix[edge.GetStartNode()][edge.GetEndNode()] = edge.GetWeight();
 	}

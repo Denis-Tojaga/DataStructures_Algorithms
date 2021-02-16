@@ -44,11 +44,11 @@ class DijkstraAlgorithm
 			}
 		return minValue;
 	}
-	ListArray<Edge<int>*>* _start()
+	ListArray<Edge*>* _start()
 	{
 		cout << "Start value -> " << _startValue << " ----- end value -> " << _endValue << endl;
 
-		ListArray<Edge<int>*>* result = new ListArray<Edge<int>*>;
+		ListArray<Edge*>* result = new ListArray<Edge*>;
 
 		//set all distances to infinity and all nodes are not visited
 		for (int i = 0; i < _matrix->GetCounter(); i++)
@@ -103,7 +103,8 @@ class DijkstraAlgorithm
 		{
 			int previousValue = _previous[value];
 			int weight = _matrix->GetEdgeWeight(previousValue, value);
-			result->Add_On_End(new Edge<int>(previousValue, value, weight));
+			Edge* edge = new Edge(previousValue, value, weight);
+			result->Add_On_End(edge);
 
 			pathValue += weight;
 			value = previousValue;
@@ -115,7 +116,7 @@ class DijkstraAlgorithm
 	}
 public:
 
-	static List<Edge<int>*>* start(AdjacencyMatrix* matrix, int start, int end)
+	static ListArray<Edge*>* start(AdjacencyMatrix* matrix, int start, int end)
 	{
 		return DijkstraAlgorithm(matrix, start, end)._start();
 	}

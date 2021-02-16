@@ -179,8 +179,8 @@
     <ClInclude Include="Test_DFS_BFS.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica4.txt" />
-    <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica9.txt" />
+    <Text Include="matrica10_t.txt" />
+    <Text Include="Matrica4.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
