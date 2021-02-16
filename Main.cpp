@@ -311,7 +311,7 @@ void Test_AdjacencyMatrix()
 	try
 	{
 		matrix->LoadFromFile("Matrica4.txt");
-		matrix->printMatrix();
+		cout << matrix->printMatrix() << endl;
 		cout << "\n\nNumber of neigbours from the node  0 is -> " << matrix->FromNeigbourCounter(0) << endl;
 		cout << "\n\nNumber of neigbours to the node  0 is -> " << matrix->ToNeigboursCounter(0) << endl;
 		cout << endl;

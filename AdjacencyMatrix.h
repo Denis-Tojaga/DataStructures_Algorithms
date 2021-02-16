@@ -157,11 +157,11 @@ public:
 		cout << "*** Adjacency Matrix *** \n\n";
 		cout << " Number of nodes -> " << _nodeCounter << endl;
 		stringstream ss;
-
+		ss << "    ";
 		for (int i = 0; i < _nodeCounter; i++)
 			ss << i << " | ";
 
-		ss << endl << string(_nodeCounter * 4 + 3, '-') << endl;
+		ss << endl<< string(_nodeCounter * 4 + 3, '-') << endl;
 
 		for (int i = 0; i <_nodeCounter; i++)
 		{
