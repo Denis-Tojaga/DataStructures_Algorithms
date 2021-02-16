@@ -155,6 +155,9 @@
     <ClInclude Include="DijkstraAlgorithm.h">
       <Filter>Header Files\Dijkstra</Filter>
     </ClInclude>
+    <ClInclude Include="DijkstraTest.h">
+      <Filter>Header Files\Dijkstra</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\OneDrive\Radna površina\ASP\code\ASP\Matrica9.txt">

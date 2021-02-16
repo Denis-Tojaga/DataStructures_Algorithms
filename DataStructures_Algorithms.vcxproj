@@ -153,6 +153,7 @@
     <ClInclude Include="DFSAlgorithmIterative.h" />
     <ClInclude Include="DFSAlgorithmRecursion.h" />
     <ClInclude Include="DijkstraAlgorithm.h" />
+    <ClInclude Include="DijkstraTest.h" />
     <ClInclude Include="Edge.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="HeapBase.h" />

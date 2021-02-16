@@ -115,5 +115,9 @@ class DijkstraAlgorithm
 	}
 public:
 
+	static List<Edge<int>*>* start(AdjacencyMatrix* matrix, int start, int end)
+	{
+		return DijkstraAlgorithm(matrix, start, end)._start();
+	}
 
 };

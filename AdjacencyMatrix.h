@@ -16,22 +16,20 @@ class AdjacencyMatrix
 {
 	int** matrix;
 	int _nodeCounter;
-	void AlocateMatrix()
+	void copy(const AdjacencyMatrix& obj)
 	{
-		matrix = new int*[_nodeCounter];
+		_nodeCounter = obj._nodeCounter;
+
+		//alocate
+		matrix = new int* [_nodeCounter];
 		for (int i = 0; i < _nodeCounter; i++)
 		{
 			matrix[i] = new int[_nodeCounter];
 			for (int j = 0; j < _nodeCounter; j++)
 				matrix[i][j] = 0;
 		}
-	}
 
-
-	void copy(const AdjacencyMatrix& obj)
-	{
-		_nodeCounter = obj._nodeCounter;
-		AlocateMatrix();
+		//copy values
 		for (int i = 0; i < _nodeCounter; i++)
 			for (int j = 0; j < _nodeCounter; j++)
 				matrix[i][j] = obj.matrix[i][j];
@@ -43,7 +41,15 @@ public:
 	AdjacencyMatrix(int nodeCount=0) : _nodeCounter(nodeCount)
 	{
 		if (nodeCount > 0)
-			AlocateMatrix();
+		{
+			matrix = new int* [nodeCount];
+			for (int i = 0; i < nodeCount; i++)
+			{
+				matrix[i] = new int[nodeCount];
+				for (int j = 0; j < nodeCount; j++)
+					matrix[i][j] = 0;
+			}
+		}
 		else
 			matrix = nullptr;
 	}
@@ -65,16 +71,14 @@ public:
 	{
 		ifstream fin(fileName);
 
-		int value = 0;
 
 		for (int i = 0; i < _nodeCounter; i++)
-		{
 			for (int j = 0; j < _nodeCounter; j++)
 			{
+				int value;
 				fin >> value;
 				matrix[i][j] = value;
 			}
-		}
 
 		fin.close();
 	}
@@ -89,11 +93,22 @@ public:
 	{
 		int** tempMatrix = matrix;
 		_nodeCounter++;
-		AlocateMatrix();
+		//alocate matrix with size bigger for one
+		matrix = new int* [_nodeCounter];
+		for (int i = 0; i < _nodeCounter; i++)
+		{
+			matrix[i] = new int[_nodeCounter];
+			for (int j = 0; j < _nodeCounter; j++)
+				matrix[i][j] = 0;
+		}
+
+
+		//copy values
 		for (int i = 0; i < _nodeCounter-1; i++)
 			for (int j = 0; j < _nodeCounter-1; j++)
 				matrix[i][j] = tempMatrix[i][j];
 
+		//dealocate helper matrix
 		for (int i = 0; i < _nodeCounter-1; i++)
 			delete[] tempMatrix[i];
 		delete[] tempMatrix;
