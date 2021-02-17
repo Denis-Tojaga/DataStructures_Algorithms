@@ -32,6 +32,9 @@
 #### * [Merge sort](./MergeSort.h)
 
 
+# Graph
+#### * [Adjacency Matrix](./AdjacencyMatrix.h)
+
 
 
 
