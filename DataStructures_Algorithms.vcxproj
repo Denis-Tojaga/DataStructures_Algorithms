@@ -180,6 +180,7 @@
     <ClInclude Include="StackLinked.h" />
     <ClInclude Include="TestBSTree.h" />
     <ClInclude Include="Test_DFS_BFS.h" />
+    <ClInclude Include="Test_Hashing.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="matrica10_t.txt" />

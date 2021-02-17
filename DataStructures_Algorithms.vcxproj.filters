@@ -170,6 +170,9 @@
     <ClInclude Include="HashingChaining.h">
       <Filter>Header Files\Hashing</Filter>
     </ClInclude>
+    <ClInclude Include="Test_Hashing.h">
+      <Filter>Header Files\Hashing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Matrica4.txt" />
