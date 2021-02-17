@@ -24,7 +24,7 @@ public:
 	{
 		int location = HashFunction(value);
 		LinkedList<T>& list = _array[location];
-		list.Add_On_End(value);
+		list.Add_On_Start(value);
 	}
 	void Remove(T value)
 	{
@@ -37,8 +37,9 @@ public:
 	{
 		for (int i = 0; i < _numberOfElements; i++)
 		{
-			cout < "\nList on location -> " << i << "\n";
-			cout << _array[i].Print() << endl;
+			cout << "\nList on location -> " << i;
+			LinkedList<T>& currentList = _array[i];
+			currentList.Print();
 		}
 	}
 };

@@ -23,6 +23,7 @@
 #include "TestBSTree.h";
 #include "Test_DFS_BFS.h";
 #include "DijkstraTest.h";
+#include "Test_Hashing.h";
 using namespace std;
 
 /// <summary>
@@ -352,6 +353,17 @@ void Test_Dijkstra()
 
 
 
+
+/// <summary>
+/// Test Hashing
+/// </summary>
+void Test_Hash()
+{
+	Test_H();
+}
+
+
+
 void main()
 {
 	int userEntry;
@@ -380,6 +392,7 @@ void main()
 		std::cout << "19.  Test * BINARY SEARCH TREE *\n";
 		std::cout << "20.  Test * BFS / DFS *\n";
 		std::cout << "21.  Test * DIJKSTRA *\n";
+		std::cout << "22.  Test * HASHING *\n";
 
 		std::cout << "\n0. ***** EXIT\n\n";
 
@@ -596,6 +609,16 @@ void main()
 			else
 				return;
 		case 21: Test_Dijkstra();
+			std::cout << "\nDo you want to continue? *** Y/N \n";
+			cin >> _continue;
+			if (_continue == 'Y' || _continue == 'y')
+			{
+				std::system("cls");
+				break;
+			}
+			else
+				return;
+		case 22: Test_Hash();
 			std::cout << "\nDo you want to continue? *** Y/N \n";
 			cin >> _continue;
 			if (_continue == 'Y' || _continue == 'y')

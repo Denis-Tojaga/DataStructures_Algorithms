@@ -128,13 +128,18 @@ public:
 	}
 	void Print()
 	{
-		cout << "\n\n *** LINKED LIST elements *** \n\n";
-		Node<T>* tempNode = _first;
-		while (tempNode != nullptr)
+		if (_first == nullptr)
+			cout << "\nLINKED LIST has no elements. \n";
+		else
 		{
-			cout << tempNode->value << " | ";
-			tempNode = tempNode->_nextNode;
+			cout << "\n\n *** LINKED LIST elements *** ";
+			Node<T>* tempNode = _first;
+			while (tempNode != nullptr)
+			{
+				cout << tempNode->value << " | ";
+				tempNode = tempNode->_nextNode;
+			}
+			cout << "\n\n";
 		}
-		cout << "\n\n";
 	}
 };
