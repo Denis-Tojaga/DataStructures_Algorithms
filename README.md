@@ -33,14 +33,15 @@
 
 
 # Graph
-#### * [Edge](./Edge.h)
-#### * [Adjacency List](./AdjacencyList.h)
-#### * [Adjacency Matrix](./AdjacencyMatrix.h)
+####  [Edge](./Edge.h)
+####  [Adjacency List](./AdjacencyList.h)
+####  [Adjacency Matrix](./AdjacencyMatrix.h)
 
 
 # BFS / DFS
 
-
+####  [Edge](./Edge.h)
+####  [Edge](./Edge.h)
 
 
 
