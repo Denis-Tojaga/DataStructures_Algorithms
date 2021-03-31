@@ -40,8 +40,8 @@
 
 # BFS / DFS
 
-####  [Edge](./Edge.h)
-####  [Edge](./Edge.h)
+####  [DFS ITERATIVE](./DFSAlgorithmIterative.h)
+####  [DFS RECURSION](./DFSAlgorithmRecursion.h)
 
 
 
