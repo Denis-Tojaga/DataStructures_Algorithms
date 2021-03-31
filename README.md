@@ -40,8 +40,13 @@
 
 # BFS / DFS
 
-####  [DFS ITERATIVE](./DFSAlgorithmIterative.h)
-####  [DFS RECURSION](./DFSAlgorithmRecursion.h)
+####  [DFS Iterative](./DFSAlgorithmIterative.h)
+####  [DFS Recursion](./DFSAlgorithmRecursion.h)
+
+####  [BFS Iterative](./BFSAlgorithmIterative.h)
+####  [BFS Recursion](./BFSAlgorithmRecursion.h)
+
+
 
 
 
