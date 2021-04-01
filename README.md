@@ -47,8 +47,8 @@
 
 # Binary Search Tree
 
-####  [DFS Iterative](./DFSAlgorithmIterative.h)
-####  [DFS Recursion](./DFSAlgorithmRecursion.h)
+####  [Binary Search Traverse](./BSTraverse.h)
+####  [Binary Search Tree](./BinarySearchTree.h)
 
 
 
