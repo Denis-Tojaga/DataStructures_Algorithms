@@ -42,8 +42,14 @@
 
 ####  [DFS Iterative](./DFSAlgorithmIterative.h)
 ####  [DFS Recursion](./DFSAlgorithmRecursion.h)
-
 ####  [BFS Iterative](./BFSAlgorithmIterative.h)
+
+
+# Binary Search Tree
+
+####  [DFS Iterative](./DFSAlgorithmIterative.h)
+####  [DFS Recursion](./DFSAlgorithmRecursion.h)
+
 
 
 
