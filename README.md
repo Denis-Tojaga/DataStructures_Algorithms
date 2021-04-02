@@ -40,15 +40,15 @@
 
 # BFS / DFS
 
-####  [DFS Iterative](./DFSAlgorithmIterative.h)
-####  [DFS Recursion](./DFSAlgorithmRecursion.h)
-####  [BFS Iterative](./BFSAlgorithmIterative.h)
+-  [DFS Iterative](./DFSAlgorithmIterative.h)
+-  [DFS Recursion](./DFSAlgorithmRecursion.h)
+-  [BFS Iterative](./BFSAlgorithmIterative.h)
 
 
 # Binary Search Tree
 
-####  [Binary Search Traverse](./BSTraverse.h)
-####  [Binary Search Tree](./BinarySearchTree.h)
+-  [Binary Search Traverse](./BSTraverse.h)
+- [Binary Search Tree](./BinarySearchTree.h)
 
 
 
